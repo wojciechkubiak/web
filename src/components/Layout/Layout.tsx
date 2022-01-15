@@ -1,18 +1,11 @@
 import { ReactNode, useContext, useEffect } from "react";
-import {
-  Background,
-  ColorBackground,
-  Container,
-  Global,
-  ThemeOption,
-  ThemeSwitch,
-} from "./LayoutStyle";
+import { Background, ColorBackground, Container, Global } from "./LayoutStyle";
 import TransformContext from "../../context/Transform";
 import PageContext from "../../context/Page";
 import ThemeContext from "../../context/Style";
 import { Page } from "../../types/Pages";
-import { FaMoon, FaSun } from "react-icons/fa";
 import { Theme } from "../../types/Themes";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
 interface ISplitBackground {
   children: ReactNode;
@@ -60,22 +53,6 @@ const SplitBackground = ({ children }: ISplitBackground) => {
 
   return (
     <Container transform={transformCtx.transform}>
-      <ThemeSwitch isDarkMode={themeCtx.themeMode === Theme.DARK}>
-        <ThemeOption
-          theme={Theme.LIGHT}
-          isDarkMode={themeCtx.themeMode === Theme.DARK}
-          onClick={() => themeCtx.setThemeMode(Theme.LIGHT)}
-        >
-          <FaSun size={24} />
-        </ThemeOption>
-        <ThemeOption
-          theme={Theme.DARK}
-          isDarkMode={themeCtx.themeMode === Theme.DARK}
-          onClick={() => themeCtx.setThemeMode(Theme.DARK)}
-        >
-          <FaMoon size={24} />
-        </ThemeOption>
-      </ThemeSwitch>
       <Global />
       <Background isDarkMode={themeCtx.themeMode === Theme.DARK} />
       <ColorBackground isDarkMode={themeCtx.themeMode === Theme.DARK} />

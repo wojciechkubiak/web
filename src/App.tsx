@@ -4,12 +4,14 @@ import PageContext from "./context/Page";
 import TransformContext from "./context/Transform";
 
 import Layout from "./components/Layout/Layout";
-import MainPage from "./components/MainPage/MainPage";
+import MainPage from "./containers/MainPage/MainPage";
 
 import { Page } from "./types/Pages";
 import "./App.css";
 import ThemeContext from "./context/Style";
 import { Theme } from "./types/Themes";
+import Projects from "./containers/Projects/Projects";
+import ThemeSwitch from "./components/ThemeSwitch/ThemeSwitch";
 
 const App = () => {
   const [transform, setTransform] = useState<number>(0);
@@ -50,7 +52,9 @@ const App = () => {
           >
             <Layout>
               <MainPage />
+              <Projects />
             </Layout>
+            <ThemeSwitch />
           </TransformContext.Provider>
         </PageContext.Provider>
       </ThemeContext.Provider>
