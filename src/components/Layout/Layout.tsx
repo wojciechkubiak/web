@@ -13,7 +13,6 @@ import ThemeContext from "../../context/Style";
 import { Page } from "../../types/Pages";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Theme } from "../../types/Themes";
-import Footer from "../Footer/Footer";
 
 interface ISplitBackground {
   children: ReactNode;
@@ -83,7 +82,6 @@ const SplitBackground = ({ children }: ISplitBackground) => {
       <Background />
 
       {children}
-      <Footer />
     </Container>
   );
 };

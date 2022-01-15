@@ -15,7 +15,6 @@ import IconButton from "../IconButton/IconButton";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { Page } from "../../types/Pages";
 import ThemeContext from "../../context/Style";
-import { Theme } from "../../types/Themes";
 
 const MainPage = () => {
   const pageCtx = useContext(PageContext);

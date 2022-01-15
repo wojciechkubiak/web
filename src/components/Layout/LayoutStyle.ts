@@ -32,7 +32,7 @@ export const Container = styled.div<ILayoutStyle>`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  transition: 500ms all;
+  transition: 500ms transform;
   transform: ${(props) => `translateX(-${props.transform}%)`};
   overflow-x: hidden;
 `;
@@ -48,7 +48,7 @@ export const Background = styled.div<ILayoutStyle>`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  transition: 1500ms;
+  transition: 1500ms transform;
   filter: ${(props) => (props.isDarkMode ? "grayscale(1)" : "none")};
 `;
 
@@ -59,7 +59,7 @@ export const ColorBackground = styled.div<ILayoutStyle>`
   min-height: 100vh;
   margin: 0 !important;
   background-color: ${(props) => (props.isDarkMode ? "#313131" : "white")};
-  transition: 500ms;
+  transition: 500ms transform;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
