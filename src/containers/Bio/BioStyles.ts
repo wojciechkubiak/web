@@ -42,13 +42,28 @@ export const BioContent = styled.div<IBioStyles>`
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
+  & > h1 {
+    width: 320px;
+    font-size: 42px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: ${(props) =>
+      props.theme === Theme.DARK ? "rgba(0, 0, 0, 0.8)" : "white"};
+    background-color: ${(props) =>
+      props.theme === Theme.DARK ? "white" : "#313131"};
+    padding: 4px 20px;
+  }
+
   & > p {
     color: ${(props) =>
       props.theme === Theme.DARK ? "white" : "rgba(0, 0, 0, 0.87)"};
     font-size: 18px;
     line-height: 28px;
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-weight: 300;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    margin-top: 32px;
   }
 
   @media screen and (max-height: 890px) {

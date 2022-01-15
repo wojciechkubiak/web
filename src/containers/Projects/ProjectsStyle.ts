@@ -5,7 +5,6 @@ interface IProjectsStyles {
 }
 
 export const Container = styled.div<IProjectsStyles>`
-  //z-index: 2000;
   width: 50%;
   min-width: 100vw;
   height: 100%;
@@ -14,4 +13,8 @@ export const Container = styled.div<IProjectsStyles>`
   position: absolute; // TODO: may make some weird things
   overflow-x: hidden;
   transform: ${(props) => `translateX(${props.transform}%)`};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;

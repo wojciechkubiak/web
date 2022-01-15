@@ -13,6 +13,7 @@ const Bio = () => {
   return (
     <BioPage currentPage={pageCtx.currentPage}>
       <BioContent theme={themeCtx.themeMode}>
+        <h1>About</h1>
         <p>
           In my career I had opportunity to create <strong>web</strong> and{" "}
           <strong>mobile applications</strong>, both <strong>client</strong> and{" "}
@@ -44,6 +45,7 @@ const Bio = () => {
           <IconButton
             onClick={() => pageCtx.setCurrentPage(Page.PROJECTS)}
             text="Projects"
+            isReversed={true}
           >
             <BsArrowRight size={64} />
           </IconButton>
