@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
-import { Container } from "./ProjectsStyle";
+import { Container, Header, ButtonsContainer } from "./ProjectsStyle";
 import PageContext from "../../context/Page";
 import { Page } from "../../types/Pages";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import IconButton from "../../components/IconButton/IconButton";
+import ThemeContext from "../../context/Style";
 
 const Projects = () => {
   const pageCtx = useContext(PageContext);
+  const themeCtx = useContext(ThemeContext);
 
   const [transform, setTransform] = useState<number>(150);
 
@@ -21,20 +23,22 @@ const Projects = () => {
 
   return (
     <Container transform={transform}>
-      <h1>Projects</h1>
-      <IconButton
-        onClick={() => pageCtx.setCurrentPage(Page.ABOUT)}
-        text="Back"
-      >
-        <BsArrowLeft size={64} />
-      </IconButton>
-      <IconButton
-        onClick={() => pageCtx.setCurrentPage(Page.CONTACT)}
-        text="Skills"
-        isReversed={true}
-      >
-        <BsArrowRight size={64} />
-      </IconButton>
+      <Header theme={themeCtx.themeMode}>Projects</Header>
+      <ButtonsContainer>
+        <IconButton
+          onClick={() => pageCtx.setCurrentPage(Page.ABOUT)}
+          text="Back"
+        >
+          <BsArrowLeft size={64} />
+        </IconButton>
+        <IconButton
+          onClick={() => pageCtx.setCurrentPage(Page.CONTACT)}
+          text="Skills"
+          isReversed={true}
+        >
+          <BsArrowRight size={64} />
+        </IconButton>
+      </ButtonsContainer>
     </Container>
   );
 };

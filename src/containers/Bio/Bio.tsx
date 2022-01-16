@@ -6,14 +6,14 @@ import { ReactNode, useContext } from "react";
 import PageContext from "../../context/Page";
 import ThemeContext from "../../context/Style";
 
-const colors: Array<String> = ["#7ca5cd", "#adb757", "#d088ad", "#d088ad"];
+const colors: Array<String> = ["#7ca5cd", "#adb757", "#d088ad", "#964c79"];
 
 const Bio = () => {
   const pageCtx = useContext(PageContext);
   const themeCtx = useContext(ThemeContext);
 
   const getRandomNumber = (): number => {
-    return Math.floor(Math.random() * 3);
+    return Math.floor(Math.random() * 4);
   };
 
   const getStrongText = (text: String): ReactNode => {

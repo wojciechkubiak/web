@@ -13,15 +13,18 @@ export const IconButtonS = styled.button<IIconButton>`
   align-items: center;
   min-width: 300px;
   border: none;
-  //border-right: ${(props) =>
-    props.isReversed ? "2px solid #313131" : "none"};
-  //border-left: ${(props) =>
-    props.isReversed ? "none" : "2px solid #313131"};
-  //border-bottom: 4px solid #313131;
+  border-bottom: 4px solid
+    ${(props) => (props.theme === Theme.DARK ? "#313131" : "white")};
   background-color: transparent;
+  transition: 200ms;
 
   & > svg {
     color: ${(props) => (props.theme === Theme.DARK ? "white" : "#313131")};
+  }
+
+  &:hover {
+    border-bottom: 4px solid
+      ${(props) => (props.theme === Theme.DARK ? "white" : "#313131")};
   }
 `;
 
@@ -35,4 +38,12 @@ export const ButtonText = styled.h4<IIconButton>`
       : "rgba(0, 0, 0, 0.87)"};
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  transition: 1000ms;
+
+  &:hover {
+    color: ${(props) =>
+      props.theme === Theme.DARK
+        ? "rgba(255, 255, 255, 1)"
+        : "rgba(0, 0, 0, 1)"};
+  }
 `;
