@@ -1,8 +1,11 @@
 import styled, { createGlobalStyle } from "styled-components";
-import BackgroundImg from "../../assets/bg3.png";
+import BackgroundLeft from "../../assets/bgleft.jpeg";
+import BackgroundRight from "../../assets/bgright.jpeg";
 import { Theme } from "../../types/Themes";
 
 interface ILayoutStyle {
+  isLeft?: boolean;
+  isAnimated?: boolean;
   transform?: number;
   isDarkMode?: boolean;
   theme: Theme;
@@ -34,7 +37,7 @@ export const Container = styled.div<ILayoutStyle>`
   align-items: center;
   transition: 500ms transform;
   transform: ${(props) => `translateX(-${props.transform}%)`};
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 
 export const Background = styled.div<ILayoutStyle>`
@@ -43,12 +46,14 @@ export const Background = styled.div<ILayoutStyle>`
   height: 100%;
   min-height: 100vh;
   margin: 0 !important;
-  background-image: url(${BackgroundImg});
+  background-image: ${(props) =>
+    props.isLeft ? `url(${BackgroundLeft})` : `url(${BackgroundRight})`};
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  transition: 1500ms transform;
+  background-size: ${(props) => (props.isAnimated ? "105%" : "100%")};
+  overflow: hidden;
+  transition: 1500ms;
   filter: ${(props) => (props.isDarkMode ? "grayscale(1)" : "none")};
 `;
 

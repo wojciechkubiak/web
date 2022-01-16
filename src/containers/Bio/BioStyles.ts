@@ -7,6 +7,7 @@ interface IBioStyles {
   isActive?: boolean;
   theme?: Theme;
   currentPage?: Page;
+  background?: String;
 }
 
 export const BioPage = styled.div<IBioStyles>`
@@ -75,4 +76,10 @@ export const BioButtons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+`;
+
+export const Strong = styled.strong<IBioStyles>`
+  background-color: ${(props) => `${props.background}`};
+  color: white;
+  padding: 0 4px;
 `;

@@ -1,4 +1,4 @@
-import { ReactNode, useContext, useEffect } from "react";
+import { ReactNode, useContext, useEffect, useState } from "react";
 import { Background, ColorBackground, Container, Global } from "./LayoutStyle";
 import TransformContext from "../../context/Transform";
 import PageContext from "../../context/Page";
@@ -17,6 +17,9 @@ const SplitBackground = ({ children }: ISplitBackground) => {
   const pageCtx = useContext(PageContext);
   const themeCtx = useContext(ThemeContext);
 
+  const [isAnimatedLeft, setIsAnimatedLeft] = useState(false);
+  const [isAnimatedRight, setIsAnimatedRight] = useState(false);
+
   useEffect(() => {
     const mode = localStorage.getItem("mode");
     if (mode) {
@@ -24,6 +27,8 @@ const SplitBackground = ({ children }: ISplitBackground) => {
         mode === Theme.DARK.toString() ? Theme.DARK : Theme.LIGHT
       );
     }
+
+    setIsAnimatedLeft(true);
   }, []);
 
   useEffect(() => {
@@ -54,9 +59,16 @@ const SplitBackground = ({ children }: ISplitBackground) => {
   return (
     <Container transform={transformCtx.transform}>
       <Global />
-      <Background isDarkMode={themeCtx.themeMode === Theme.DARK} />
+      <Background
+        isDarkMode={themeCtx.themeMode === Theme.DARK}
+        isLeft={true}
+        isAnimated={isAnimatedLeft}
+      />
       <ColorBackground isDarkMode={themeCtx.themeMode === Theme.DARK} />
-      <Background />
+      <Background
+        isDarkMode={themeCtx.themeMode === Theme.DARK}
+        isLeft={false}
+      />
 
       {children}
     </Container>
