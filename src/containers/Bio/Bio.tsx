@@ -8,7 +8,11 @@ import ThemeContext from "../../context/Style";
 
 const colors: Array<String> = ["#7ca5cd", "#adb757", "#d088ad", "#964c79"];
 
-const Bio = () => {
+interface IBio {
+  t: any;
+}
+
+const Bio = ({ t }: IBio) => {
   const pageCtx = useContext(PageContext);
   const themeCtx = useContext(ThemeContext);
 
@@ -25,39 +29,44 @@ const Bio = () => {
   return (
     <BioPage currentPage={pageCtx.currentPage}>
       <BioContent theme={themeCtx.themeMode}>
-        <h1>About</h1>
+        <h1>{t("pages.about", { framework: "react-i18next" })}</h1>
         <p>
-          In my career I had opportunity to create {getStrongText("web")} and{" "}
-          {getStrongText("mobile applications")}, both {getStrongText("client")}{" "}
-          and {getStrongText("server side")}. Ok, but how it all started? I used
-          to draw a lot in my childhood - and I am doing that until now. Later,
-          in high school I was {getStrongText("creating building designs")}.
-          There was always that one particle inside of me which makes me enjoy{" "}
-          {getStrongText("creating things")}. After high school fate wanted me
-          to start study programming. Of course the first thing that caught my
-          eye was {getStrongText("web")} and{" "}
-          {getStrongText("mobile development")}. From that first weeks - even
-          days - all I'm doing is thinking about what fancy application I could
-          do, that would be nice looking and functional. Currently{" "}
-          {getStrongText("I accept\n" + "          various types of orders")} ,
-          I am working full time job as a programmer -{" "}
-          {getStrongText("Mobile / Frontend Developer")}, which allows me to
-          earn a living while doing something I feel strong with, what makes my
-          eyes shine. If you want to hire me or give me an assignment, so I can
-          share my passion with you, {getStrongText("fill in the form")} at the
-          end of the website or just go into one of my social medias and{" "}
-          {getStrongText("message me")}.
+          {t("bio.part1", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold1", { framework: "react-i18next" }))}
+          {t("bio.part2", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold2", { framework: "react-i18next" }))}
+          {t("bio.part3", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold3", { framework: "react-i18next" }))}
+          {t("bio.part4", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold4", { framework: "react-i18next" }))}
+          {t("bio.part5", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold5", { framework: "react-i18next" }))}
+          {t("bio.part6", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold6", { framework: "react-i18next" }))}
+          {t("bio.part7", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold7", { framework: "react-i18next" }))}
+          {t("bio.part8", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold8", { framework: "react-i18next" }))}
+          {t("bio.part9", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold9", { framework: "react-i18next" }))}
+          {t("bio.part10", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold10", { framework: "react-i18next" }))}
+          {t("bio.part11", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold11", { framework: "react-i18next" }))}
+          {t("bio.part12", { framework: "react-i18next" })}
+          {getStrongText(t("bio.bold12", { framework: "react-i18next" }))}
+          {t("bio.part13", { framework: "react-i18next" })}
         </p>
         <BioButtons>
           <IconButton
             onClick={() => pageCtx.setCurrentPage(Page.HOME)}
-            text="Back"
+            text={t("global.back", { framework: "react-i18next" })}
           >
             <BsArrowLeft size={64} />
           </IconButton>
           <IconButton
             onClick={() => pageCtx.setCurrentPage(Page.PROJECTS)}
-            text="Projects"
+            text={t("pages.projects", { framework: "react-i18next" })}
             isReversed={true}
           >
             <BsArrowRight size={64} />

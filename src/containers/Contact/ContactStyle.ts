@@ -21,7 +21,7 @@ export const Container = styled.div<IContactStyles>`
   align-items: center;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.div<IContactStyles>`
   width: 30%;
   margin-left: 8%;
   padding: 40px;
@@ -29,18 +29,43 @@ export const FormContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: white;
+  background-color: ${(props) =>
+    props.theme === Theme.DARK ? "#313131" : "white"};
+  border: 2px solid white;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 `;
 
 export const SocialContainer = styled.div`
+  position: relative;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+`;
+
+export const Socials = styled.div<IContactStyles>`
+  position: absolute;
+  background-color: ${(props) =>
+    props.theme === Theme.DARK ? "#313131" : "white"};
+  right: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 1px 1px 0 inset,
+    rgba(50, 50, 93, 0.7) 0 20px 50px -10px,
+    rgba(0, 0, 0, 0.9) 0px 10px 20px -15px;
+  padding: 20px;
+
+  & > svg {
+    margin: 20px 0;
+    color: ${(props) => (props.theme === Theme.DARK ? "white" : "#313131")};
+    cursor: pointer;
+  }
 `;
 
 export const Form = styled.form`
@@ -84,7 +109,7 @@ export const Input = styled.input<IContactStyles>`
       ? "rgba(255, 255, 255, 1)"
       : "rgba(0, 0, 0, 0.8)"};
   background-color: ${(props) =>
-    props.theme === Theme.DARK ? "#212121" : "white"};
+    props.theme === Theme.DARK ? "#313131" : "white"};
 
   &:focus {
     box-shadow: none;
@@ -109,7 +134,7 @@ export const TextArea = styled.textarea<IContactStyles>`
       ? "rgba(255, 255, 255, 1)"
       : "rgba(0, 0, 0, 0.8)"};
   background-color: ${(props) =>
-    props.theme === Theme.DARK ? "#212121" : "white"};
+    props.theme === Theme.DARK ? "#313131" : "white"};
 
   &:focus {
     box-shadow: none;

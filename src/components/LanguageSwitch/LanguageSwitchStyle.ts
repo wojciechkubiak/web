@@ -26,7 +26,7 @@ export const LanguageSwitchContainer = styled.div<ILanguageSwitch>`
   flex-direction: row;
   justify-content: space-between;
   background-color: ${(props) => (props.isActive ? "#313131" : "white")};
-  box-shadow: rgba(255, 255, 255, 0.6) 0 1px 1px 0 inset,
+  box-shadow: rgba(255, 255, 255, 0.2) 0 1px 1px 0 inset,
     rgba(50, 50, 93, 0.7) 0 20px 50px -10px,
     rgba(0, 0, 0, 0.9) 0px 10px 20px -15px;
 `;

@@ -66,7 +66,7 @@ const MainPage = ({ t }: IMainPage) => {
           </IconButton>
         </ButtonContainer>
       </MainPageStyled>
-      <Bio />
+      <Bio t={t} />
     </IndexPageContainer>
   );
 };

@@ -1,5 +1,19 @@
 {
+  "global": {
+    "back": "Wstecz"
+  },
   "home": {
     "find_out": "Dowiedz się więcej"
+  },
+  "pages": {
+    "about": "O mnie",
+    "projects": "Projekty",
+    "skills": "Umiejętności",
+    "contact": "Kontakt"
+  },
+  "form": {
+    "email": "Twój email",
+    "subject": "Temat",
+    "message": "Wiadomość"
   }
 }

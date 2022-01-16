@@ -32,17 +32,19 @@ const Skills = ({ t }: ISkills) => {
 
   return (
     <Container transform={transform}>
-      <Header theme={themeCtx.themeMode}>Skills</Header>
+      <Header theme={themeCtx.themeMode}>
+        {t("pages.skills", { framework: "react-i18next" })}
+      </Header>
       <ButtonsContainer>
         <IconButton
           onClick={() => pageCtx.setCurrentPage(Page.PROJECTS)}
-          text="Back"
+          text={t("global.back", { framework: "react-i18next" })}
         >
           <BsArrowLeft size={64} />
         </IconButton>
         <IconButton
           onClick={() => pageCtx.setCurrentPage(Page.CONTACT)}
-          text="Contact"
+          text={t("pages.contact", { framework: "react-i18next" })}
           isReversed={true}
         >
           <BsArrowRight size={64} />

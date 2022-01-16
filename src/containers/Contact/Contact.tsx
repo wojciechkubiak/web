@@ -1,19 +1,21 @@
 import { FormEvent, useContext, useEffect, useState } from "react";
-import axios from "axios";
 
+import axios from "axios";
+import ThemeContext from "../../context/Style";
+import PageContext from "../../context/Page";
+import { Page } from "../../types/Pages";
+import { BsArrowLeft } from "react-icons/bs";
+import { FaDeviantart, FaGit, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
 import {
   Container,
   Form,
   FormContainer,
   SocialContainer,
+  Socials,
 } from "./ContactStyle";
-import PageContext from "../../context/Page";
-import { Page } from "../../types/Pages";
-import ThemeContext from "../../context/Style";
-import { BsArrowLeft } from "react-icons/bs";
-import { FiSend } from "react-icons/fi";
-import IconButton from "../../components/IconButton/IconButton";
 import { Header, Input, TextArea, SubmitButton } from "./ContactStyle";
+import IconButton from "../../components/IconButton/IconButton";
 
 interface IContact {
   t: any;
@@ -77,20 +79,26 @@ const Contact = ({ t }: IContact) => {
     }));
   };
 
+  const onIconClicked = (value: string) => {
+    window.open(value, "_blank");
+  };
+
   return (
     <Container transform={transform}>
-      <FormContainer>
+      <FormContainer theme={themeCtx.themeMode}>
         <IconButton
           onClick={() => pageCtx.setCurrentPage(Page.SKILLS)}
-          text="Back"
+          text={t("global.back", { framework: "react-i18next" })}
         >
           <BsArrowLeft size={64} />
         </IconButton>
-        <Header theme={themeCtx.themeMode}>Contact</Header>
+        <Header theme={themeCtx.themeMode}>
+          {t("pages.contact", { framework: "react-i18next" })}
+        </Header>
         <Form onSubmit={(event) => onSubmit(event, message)}>
           <Input
             name="email"
-            placeholder="Your email"
+            placeholder={t("form.email", { framework: "react-i18next" })}
             value={message.email}
             onChange={onChange}
             minLength={2}
@@ -101,7 +109,7 @@ const Contact = ({ t }: IContact) => {
           />
           <Input
             name="subject"
-            placeholder="Subject"
+            placeholder={t("form.subject", { framework: "react-i18next" })}
             value={message.subject}
             onChange={onChange}
             minLength={2}
@@ -111,7 +119,7 @@ const Contact = ({ t }: IContact) => {
           />
           <TextArea
             name="message"
-            placeholder="Message"
+            placeholder={t("form.message", { framework: "react-i18next" })}
             value={message.message}
             onChange={onChange}
             minLength={32}
@@ -128,7 +136,30 @@ const Contact = ({ t }: IContact) => {
         </Form>
       </FormContainer>
       <SocialContainer>
-        <FiSend size={42} />
+        <Socials theme={themeCtx.themeMode}>
+          <FaLinkedin
+            size={42}
+            onClick={() =>
+              onIconClicked("https://www.linkedin.com/in/wojciechkubiakin")
+            }
+          />
+          <FaGit
+            size={42}
+            onClick={() =>
+              onIconClicked("https://www.github.com/wojciechkubiak")
+            }
+          />
+          <FaFacebook
+            size={42}
+            onClick={() =>
+              onIconClicked("https://www.facebook.com/wojciechkubiakfb")
+            }
+          />
+          <FaDeviantart
+            size={42}
+            onClick={() => onIconClicked("https://deviantart.com/biakku")}
+          />
+        </Socials>
       </SocialContainer>
     </Container>
   );
