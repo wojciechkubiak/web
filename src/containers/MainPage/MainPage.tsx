@@ -14,7 +14,11 @@ import { Page } from "../../types/Pages";
 import ThemeContext from "../../context/Style";
 import Bio from "../Bio/Bio";
 
-const MainPage = () => {
+interface IMainPage {
+  t: any;
+}
+
+const MainPage = ({ t }: IMainPage) => {
   const pageCtx = useContext(PageContext);
   const themeCtx = useContext(ThemeContext);
 
@@ -55,7 +59,7 @@ const MainPage = () => {
               setIsReversed(true);
               // transformCtx.setTransform(50);
             }}
-            text="Find out more"
+            text={t("home.find_out", { framework: "react-i18next" })}
             isReversed={true}
           >
             <BsArrowRight size={64} />

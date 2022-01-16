@@ -45,7 +45,7 @@ export const Header = styled.h1<IMainPageStyle>`
   position: relative;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 124px;
+  font-size: 7rem;
   color: ${(props) =>
     props.theme === Theme.DARK
       ? "rgba(255, 255, 255, 1)"
@@ -67,7 +67,7 @@ export const Header = styled.h1<IMainPageStyle>`
 
 export const Subheader = styled.h1<IMainPageStyle>`
   position: relative;
-  font-size: 72px;
+  font-size: 4rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   width: 920px;

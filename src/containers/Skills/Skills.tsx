@@ -1,16 +1,16 @@
 import { useContext, useEffect, useState } from "react";
-import { ButtonsContainer, Container, Header } from "./ProjectsStyle";
+import { ButtonsContainer, Container, Header } from "./SkillsStyle";
 import PageContext from "../../context/Page";
 import { Page } from "../../types/Pages";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import IconButton from "../../components/IconButton/IconButton";
 import ThemeContext from "../../context/Style";
 
-interface IProjects {
+interface ISkills {
   t: any;
 }
 
-const Projects = ({ t }: IProjects) => {
+const Skills = ({ t }: ISkills) => {
   const pageCtx = useContext(PageContext);
   const themeCtx = useContext(ThemeContext);
 
@@ -19,10 +19,11 @@ const Projects = ({ t }: IProjects) => {
   useEffect(() => {
     if (
       pageCtx.currentPage === Page.ABOUT ||
-      pageCtx.currentPage === Page.HOME
+      pageCtx.currentPage === Page.HOME ||
+      pageCtx.currentPage === Page.PROJECTS
     ) {
       setTransform(100);
-    } else if (pageCtx.currentPage === Page.PROJECTS) {
+    } else if (pageCtx.currentPage === Page.SKILLS) {
       setTransform(0);
     } else {
       setTransform(-100);
@@ -31,17 +32,17 @@ const Projects = ({ t }: IProjects) => {
 
   return (
     <Container transform={transform}>
-      <Header theme={themeCtx.themeMode}>Projects</Header>
+      <Header theme={themeCtx.themeMode}>Skills</Header>
       <ButtonsContainer>
         <IconButton
-          onClick={() => pageCtx.setCurrentPage(Page.ABOUT)}
+          onClick={() => pageCtx.setCurrentPage(Page.PROJECTS)}
           text="Back"
         >
           <BsArrowLeft size={64} />
         </IconButton>
         <IconButton
-          onClick={() => pageCtx.setCurrentPage(Page.SKILLS)}
-          text="Skills"
+          onClick={() => pageCtx.setCurrentPage(Page.CONTACT)}
+          text="Contact"
           isReversed={true}
         >
           <BsArrowRight size={64} />
@@ -51,4 +52,4 @@ const Projects = ({ t }: IProjects) => {
   );
 };
 
-export default Projects;
+export default Skills;

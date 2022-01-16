@@ -28,8 +28,15 @@ const SplitBackground = ({ children }: ISplitBackground) => {
       );
     }
 
-    setIsAnimatedLeft(true);
+    if (!isAnimatedLeft) setIsAnimatedLeft(true);
   }, []);
+
+  useEffect(() => {
+    if (pageCtx.currentPage === Page.CONTACT && !isAnimatedRight)
+      setTimeout(() => {
+        setIsAnimatedRight(true);
+      }, 500);
+  }, [pageCtx]);
 
   useEffect(() => {
     localStorage.setItem("mode", themeCtx.themeMode.toString());
@@ -68,6 +75,7 @@ const SplitBackground = ({ children }: ISplitBackground) => {
       <Background
         isDarkMode={themeCtx.themeMode === Theme.DARK}
         isLeft={false}
+        isAnimated={isAnimatedRight}
       />
 
       {children}

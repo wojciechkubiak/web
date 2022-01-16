@@ -59,9 +59,9 @@ export const BioContent = styled.div<IBioStyles>`
     color: ${(props) =>
       props.theme === Theme.DARK ? "white" : "rgba(0, 0, 0, 0.87)"};
     font-size: 18px;
-    line-height: 28px;
+    line-height: 36px;
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     padding-bottom: 32px;
     margin-bottom: 32px;
     margin-top: 32px;

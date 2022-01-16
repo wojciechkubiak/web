@@ -17,6 +17,7 @@ export const IconButtonS = styled.button<IIconButton>`
     ${(props) => (props.theme === Theme.DARK ? "#313131" : "white")};
   background-color: transparent;
   transition: 200ms;
+  margin-bottom: 20px;
 
   & > svg {
     color: ${(props) => (props.theme === Theme.DARK ? "white" : "#313131")};

@@ -2,60 +2,63 @@ import styled from "styled-components";
 import { Theme } from "../../types/Themes";
 import { Page } from "../../types/Pages";
 
-interface IThemeSwitch {
-  isDarkMode?: boolean;
+interface ILanguageSwitch {
+  isActive?: boolean;
   theme: Theme;
   page?: Page;
 }
 
-export const ThemeSwitchContainer = styled.div<IThemeSwitch>`
+export const LanguageSwitchContainer = styled.div<ILanguageSwitch>`
   position: fixed;
   z-index: 2000;
   left: 16px;
-  top: 16px;
-  width: 90px;
-  padding: 10px 20px;
+  bottom: 16px;
+  height: 45px;
+  padding: 8px;
   border-radius: 12px;
   border: ${(props) =>
     props.page === Page.ABOUT || props.page === Page.HOME
       ? "2px solid transparent"
-      : props.isDarkMode
+      : props.isActive
       ? "2px solid #2a2a2a"
       : "2px solid white"};
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  background-color: ${(props) => (props.isDarkMode ? "#313131" : "white")};
-  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset,
-    rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background-color: ${(props) => (props.isActive ? "#313131" : "white")};
+  box-shadow: rgba(255, 255, 255, 0.6) 0 1px 1px 0 inset,
+    rgba(50, 50, 93, 0.7) 0 20px 50px -10px,
+    rgba(0, 0, 0, 0.9) 0px 10px 20px -15px;
 `;
 
-export const ThemeOption = styled.div<IThemeSwitch>`
+export const LanguageOption = styled.div<ILanguageSwitch>`
   background-color: ${(props) =>
-    props.isDarkMode
+    props.isActive
       ? props.theme === Theme.DARK
         ? "white"
         : "#313131"
       : props.theme === Theme.DARK
-      ? "white"
-      : "#313131"};
+      ? "#313131"
+      : "white"};
   padding: 8px;
-  border-radius: 12px;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 
-  & > svg {
+  & > p {
     color: ${(props) =>
-      props.isDarkMode
+      props.isActive
         ? props.theme === Theme.DARK
           ? "#313131"
           : "white"
         : props.theme === Theme.DARK
-        ? "#313131"
-        : "white"};
+        ? "white"
+        : "#313131"};
+    width: 29px;
+    height: 29px;
+    text-align: center;
   }
 `;

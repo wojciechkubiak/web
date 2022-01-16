@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
-import BackgroundLeft from "../../assets/bgleft.jpeg";
-import BackgroundRight from "../../assets/bgright.jpeg";
+import BackgroundLeft from "../../assets/images/bgleft.jpeg";
+import BackgroundRight from "../../assets/images/bgright.jpeg";
 import { Theme } from "../../types/Themes";
 
 interface ILayoutStyle {
@@ -52,9 +52,14 @@ export const Background = styled.div<ILayoutStyle>`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: ${(props) => (props.isAnimated ? "105%" : "100%")};
+  background-repeat: no-repeat;
   overflow: hidden;
   transition: 1500ms;
   filter: ${(props) => (props.isDarkMode ? "grayscale(1)" : "none")};
+
+  @media screen and (max-width: 1510px) {
+    background-size: cover;
+  }
 `;
 
 export const ColorBackground = styled.div<ILayoutStyle>`
