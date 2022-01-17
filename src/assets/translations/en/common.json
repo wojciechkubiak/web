@@ -115,9 +115,10 @@
     {
       "name": "python",
       "description": [
-        "Basic syntax",
-        "Basic functionalities",
-        "Simple web apps implementation"
+        "Basics syntax",
+        "Basics functionalities",
+        "Simple web apps implementation",
+        "Basics of Django"
       ]
     },
     {

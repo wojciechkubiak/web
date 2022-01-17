@@ -11,9 +11,133 @@
     "skills": "Umiejętności",
     "contact": "Kontakt"
   },
+  "skills_headers": {
+    "order": "Zleć",
+    "hire": "Zatrudnij"
+  },
   "form": {
     "email": "Twój email",
     "subject": "Temat",
     "message": "Wiadomość"
-  }
+  },
+  "bio": {
+    "part1": "In my career I had opportunity to create ",
+    "bold1": "web",
+    "part2": " and ",
+    "bold2": "mobile applications",
+    "part3": ", both ",
+    "bold3": "client",
+    "part4": " and ",
+    "bold4": "server side",
+    "part5": ". Ok, but how it all started? I used to draw a lot in my childhood - and I am doing that until now. Later, in high school I was ",
+    "bold5": "creating building designs",
+    "part6": ". There was always that one particle inside of me which makes me enjoy ",
+    "bold6": "creating things",
+    "part7": ". After high school fate wanted me to start study programming. Of course the first thing that caught my eye was ",
+    "bold7": "web",
+    "part8": " and ",
+    "bold8": "mobile development",
+    "part9": ". From that first weeks - even days - all I'm doing is thinking about what fancy application I could do, that would be nice looking and functional. Currently ",
+    "bold9": "I accept various types of orders",
+    "part10": ", I am working full time job as a programmer - ",
+    "bold10": "Mobile / Frontend Developer",
+    "part11": ", which allows me to earn a living while doing something I feel strong with, what makes my eyes shine. If you want to hire me or give me an assignment, so I can share my passion with you, ",
+    "bold11": "fill in the form",
+    "part12": " at the end of the website or just go into one of my social medias and ",
+    "bold12": "message me",
+    "part13": "."
+  },
+  "skills": [
+    {
+      "name": "flutter",
+      "description": [
+        "Programowanie obiektowe",
+        "Tworzenie widoków i logiki",
+        "Architektura BLoC",
+        "Implementacja i modyfikacja paczek",
+        "Animacje"
+      ]
+    },
+    {
+      "name": "react",
+      "description": [
+        "React Hooks, Context API",
+        "Programowanie funkcyjne",
+        "Programowanie obiektowe",
+        "Implementacja zewnętrznych bibliotek",
+        "Podstawy Redux",
+        "NextJS"
+      ]
+    },
+    {
+      "name": "javascript",
+      "description": [
+        "ES6+",
+        "Manipulacja DOM-em",
+        "Programowanie funkcyjne",
+        "Programowanie obiektowe",
+        "Async"
+      ]
+    },
+    {
+      "name": "typescript",
+      "description": [
+        "Konwersja kodu JavaScript do TypeScript",
+        "Średnio-zaawansowana składnia",
+        "React Typescript",
+        "Implementacja NextJS"
+      ]
+    },
+    {
+      "name": "nodejs",
+      "description": [
+        "Podstawy ExpressJS",
+        "REST API",
+        "MVC",
+        "Sequelize",
+        "Prisma"
+      ]
+    },
+    {
+      "name": "html",
+      "description": ["Średni-zaawansowana składnia"]
+    },
+    {
+      "name": "css",
+      "description": [
+        "CSS Grid",
+        "Flexbox",
+        "SASS",
+        "Animacje",
+        "Responsywny design"
+      ]
+    },
+    {
+      "name": "python",
+      "description": [
+        "Podstawowa składnia",
+        "Podstawowe funkcjonalności",
+        "Tworzenie prostych aplikacji webowych",
+        "Podstawy Django"
+      ]
+    },
+    {
+      "name": "sql",
+      "description": ["Składnia MySQL / PostgreSQL", "Łączenie tabel", "T-SQL"]
+    }
+  ],
+  "offers": [
+    {
+      "name": "web",
+      "description": ["Jeśli potrzebujesz strony internetowej, jesteś w dobrym miejscu. Jestem w stanie stworzyć funkcjonalne aplikacje webowe oparte na Twoich preferencjach."]
+    },
+    {
+      "name": "mobile",
+      "description": ["Idea aplikacji mobilnej nie daje ci spać? Nie zwlekaj i wyślij mi wiadomość. Tworzenie przyciągających wzrok aplikacji mobilnych nie stanowi dla mnie problemu."]
+    },
+    {
+      "name": "backend/db",
+      "description": ["Połączenie aplikacji z bazą jest katorgą? Mogę ci w tym pomóc - zarówno jeśli mowa o modelu bazy danych, jak również z samą komunikacją z uprzednio stworzoną bazą danych. Ze mną przechowywanie danych jest przyjemnością."]
+    }
+  ]
 }

@@ -44,7 +44,7 @@ export const Header = styled.h1<ISkillsStyles>`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 94px;
-  width: 320px;
+  width: 450px;
   color: ${(props) =>
     props.theme === Theme.DARK
       ? "rgba(255, 255, 255, 1)"
