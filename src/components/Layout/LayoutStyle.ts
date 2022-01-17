@@ -11,7 +11,7 @@ interface ILayoutStyle {
   theme: Theme;
 }
 
-export const Global = createGlobalStyle`
+export const Global = createGlobalStyle<ILayoutStyle>`
   body {
     background-color: white;
     height: 100vh !important;
@@ -21,6 +21,28 @@ export const Global = createGlobalStyle`
   body, h1 {
     margin: 0 !important;
   }
+
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme === Theme.DARK ? "#515151" : "#f1f1f1"};
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d088ad;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #964c79;
+  }
+
 `;
 
 export const Container = styled.div<ILayoutStyle>`

@@ -1,11 +1,16 @@
-import { ReactNode, useContext, useEffect, useState } from "react";
-import { Background, ColorBackground, Container, Global } from "./LayoutStyle";
-import TransformContext from "../../context/Transform";
-import PageContext from "../../context/Page";
-import ThemeContext from "../../context/Style";
-import { Page } from "../../types/Pages";
-import { Theme } from "../../types/Themes";
-import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
+import { ReactNode, useContext, useEffect, useState } from 'react';
+import {
+  Background,
+  ColorBackground,
+  Container,
+  Global,
+} from './LayoutStyle';
+import TransformContext from '../../context/Transform';
+import PageContext from '../../context/Page';
+import ThemeContext from '../../context/Style';
+import { Page } from '../../types/Pages';
+import { Theme } from '../../types/Themes';
+import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 
 interface ISplitBackground {
   children: ReactNode;
@@ -21,10 +26,10 @@ const SplitBackground = ({ children }: ISplitBackground) => {
   const [isAnimatedRight, setIsAnimatedRight] = useState(false);
 
   useEffect(() => {
-    const mode = localStorage.getItem("mode");
+    const mode = localStorage.getItem('mode');
     if (mode) {
       themeCtx.setThemeMode(
-        mode === Theme.DARK.toString() ? Theme.DARK : Theme.LIGHT
+        mode === Theme.DARK.toString() ? Theme.DARK : Theme.LIGHT,
       );
     }
 
@@ -39,7 +44,7 @@ const SplitBackground = ({ children }: ISplitBackground) => {
   }, [pageCtx]);
 
   useEffect(() => {
-    localStorage.setItem("mode", themeCtx.themeMode.toString());
+    localStorage.setItem('mode', themeCtx.themeMode.toString());
   }, [themeCtx.themeMode]);
 
   useEffect(() => {
@@ -65,13 +70,15 @@ const SplitBackground = ({ children }: ISplitBackground) => {
 
   return (
     <Container transform={transformCtx.transform}>
-      <Global />
+      <Global theme={themeCtx.themeMode} />
       <Background
         isDarkMode={themeCtx.themeMode === Theme.DARK}
         isLeft={true}
         isAnimated={isAnimatedLeft}
       />
-      <ColorBackground isDarkMode={themeCtx.themeMode === Theme.DARK} />
+      <ColorBackground
+        isDarkMode={themeCtx.themeMode === Theme.DARK}
+      />
       <Background
         isDarkMode={themeCtx.themeMode === Theme.DARK}
         isLeft={false}

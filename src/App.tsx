@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import { withTranslation } from "react-i18next";
+import React, { useState } from 'react';
+import { withTranslation } from 'react-i18next';
 
-import PageContext from "./context/Page";
-import TransformContext from "./context/Transform";
-import ThemeContext from "./context/Style";
+import PageContext from './context/Page';
+import TransformContext from './context/Transform';
+import ThemeContext from './context/Style';
 
-import { Theme } from "./types/Themes";
-import { Page } from "./types/Pages";
+import { Theme } from './types/Themes';
+import { Page } from './types/Pages';
 
-import Layout from "./components/Layout/Layout";
-import MainPage from "./containers/MainPage/MainPage";
-import Projects from "./containers/Projects/Projects";
-import Skills from "./containers/Skills/Skills";
-import ThemeSwitch from "./components/ThemeSwitch/ThemeSwitch";
-import LanguageSwitch from "./components/LanguageSwitch/LanguageSwitch";
+import Layout from './components/Layout/Layout';
+import MainPage from './containers/MainPage/MainPage';
+import Projects from './containers/Projects/Projects';
+import Skills from './containers/Skills/Skills';
+import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
+import LanguageSwitch from './components/LanguageSwitch/LanguageSwitch';
 
-import "./App.css";
-import Contact from "./containers/Contact/Contact";
+import './App.css';
+import Contact from './containers/Contact/Contact';
 
 const App = (props: any) => {
   const { t, i18n } = props;
-  const [lang, setLang] = useState<string>("en");
+  const [lang, setLang] = useState<string>('en');
 
   const [transform, setTransform] = useState<number>(0);
   const [page, setPage] = useState<Page>(Page.HOME);
@@ -80,4 +80,4 @@ const App = (props: any) => {
   );
 };
 
-export default withTranslation("common")(App);
+export default withTranslation('common')(App);

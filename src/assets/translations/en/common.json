@@ -11,6 +11,10 @@
     "skills": "Skills",
     "contact": "Contact"
   },
+  "skills_headers": {
+    "order": "Order",
+    "hire": "Hire"
+  },
   "form": {
     "email": "Your email",
     "subject": "Subject",
@@ -42,5 +46,97 @@
     "part12": " at the end of the website or just go into one of my social medias and ",
     "bold12": "message me",
     "part13": "."
-  }
+  },
+  "skills": [
+    {
+      "name": "flutter",
+      "description": [
+        "Objective programming",
+        "Making of views and app logic",
+        "BLoC architecture",
+        "Implementation and modification of existing packages",
+        "Animations"
+      ]
+    },
+    {
+      "name": "react",
+      "description": [
+        "React Hooks, Context API",
+        "Functional programming",
+        "Objective programming",
+        "External libraries implementation",
+        "Basics of Redux",
+        "NextJS"
+      ]
+    },
+    {
+      "name": "javascript",
+      "description": [
+        "ES6+",
+        "DOM Manipulation",
+        "Functional programming",
+        "Objective programming",
+        "Async"
+      ]
+    },
+    {
+      "name": "typescript",
+      "description": [
+        "Javascript to Typescript conversion",
+        "Semi-advanced syntax",
+        "React implementation",
+        "NextJS implementation"
+      ]
+    },
+    {
+      "name": "nodejs",
+      "description": [
+        "Basics of ExpressJS",
+        "REST API",
+        "MVC",
+        "Sequelize",
+        "Prisma"
+      ]
+    },
+    {
+      "name": "html",
+      "description": ["Semi-advanced syntax"]
+    },
+    {
+      "name": "css",
+      "description": [
+        "CSS Grid",
+        "Flexbox",
+        "SASS",
+        "Animations",
+        "Responsive web design"
+      ]
+    },
+    {
+      "name": "python",
+      "description": [
+        "Basic syntax",
+        "Basic functionalities",
+        "Simple web apps implementation"
+      ]
+    },
+    {
+      "name": "sql",
+      "description": ["MySQL / PostgreSQL syntax", "Joins", "T-SQL"]
+    }
+  ],
+  "offers": [
+    {
+      "name": "web",
+      "description": ["If you need a website, you've come to the right place. I am able to make a full-fledged web application based on your preferences."]
+    },
+    {
+      "name": "mobile",
+      "description": ["There is mobile application on your mind? Don't hesitate and send me a message. Creating an eye-catching mobile application is not a problem for me, which is confirmed by my current professional experience."]
+    },
+    {
+      "name": "backend/db",
+      "description": ["Connecting your application to the database is a struggle? I can help you with both database model and communication with already created one. Handling data storage is pleasure with me."]
+    }
+  ]
 }
