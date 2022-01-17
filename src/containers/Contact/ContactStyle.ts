@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Theme } from "../../types/Themes";
+import styled from 'styled-components';
+import { Theme } from '../../types/Themes';
 
 interface IContactStyles {
   transform?: number;
@@ -30,12 +30,18 @@ export const FormContainer = styled.div<IContactStyles>`
   align-items: center;
   justify-content: space-evenly;
   background-color: ${(props) =>
-    props.theme === Theme.DARK ? "#313131" : "white"};
-    border: ${(props) =>
-      props.theme === Theme.DARK ? "2px solid white" : " 3px solid grey    "};
+    props.theme === Theme.DARK ? '#313131' : 'white'};
+  border: ${(props) =>
+    props.theme === Theme.DARK
+      ? '2px solid white'
+      : ' 3px solid grey    '};
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+  @media screen and (max-width: 1600px) {
+    transform: scale(0.8);
+  }
 `;
 
 export const SocialContainer = styled.div`
@@ -50,7 +56,7 @@ export const SocialContainer = styled.div`
 export const Socials = styled.div<IContactStyles>`
   position: absolute;
   background-color: ${(props) =>
-    props.theme === Theme.DARK ? "#313131" : "white"};
+    props.theme === Theme.DARK ? '#313131' : 'white'};
   right: 12px;
   border-radius: 12px;
   display: flex;
@@ -64,7 +70,8 @@ export const Socials = styled.div<IContactStyles>`
 
   & > svg {
     margin: 20px 0;
-    color: ${(props) => (props.theme === Theme.DARK ? "white" : "#313131")};
+    color: ${(props) =>
+      props.theme === Theme.DARK ? 'white' : '#313131'};
     cursor: pointer;
   }
 `;
@@ -80,15 +87,15 @@ export const Form = styled.form`
 `;
 
 export const Header = styled.h1<IContactStyles>`
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 94px;
   color: ${(props) =>
     props.theme === Theme.DARK
-      ? "rgba(255, 255, 255, 1)"
-      : "rgba(0, 0, 0, 0.8)"};
+      ? 'rgba(255, 255, 255, 1)'
+      : 'rgba(0, 0, 0, 0.8)'};
   background-color: ${(props) =>
-    props.theme === Theme.DARK ? "#313131" : "white"};
+    props.theme === Theme.DARK ? '#313131' : 'white'};
   border-bottom: 8px solid #adb757;
   border-right: 4px solid #adb757;
   padding: 0 20px;
@@ -97,20 +104,24 @@ export const Header = styled.h1<IContactStyles>`
 export const Input = styled.input<IContactStyles>`
   border: none;
   border-bottom: ${(props) =>
-    props.theme === Theme.DARK ? " 4px solid white" : " 4px solid #313131"};
+    props.theme === Theme.DARK
+      ? ' 4px solid white'
+      : ' 4px solid #313131'};
   border-right: ${(props) =>
-    props.theme === Theme.DARK ? " 2px solid white" : " 2px solid #313131"};
-  font-family: "Montserrat", sans-serif;
+    props.theme === Theme.DARK
+      ? ' 2px solid white'
+      : ' 2px solid #313131'};
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 26px;
   text-align: center;
   padding: 10px;
   color: ${(props) =>
     props.theme === Theme.DARK
-      ? "rgba(255, 255, 255, 1)"
-      : "rgba(0, 0, 0, 0.8)"};
+      ? 'rgba(255, 255, 255, 1)'
+      : 'rgba(0, 0, 0, 0.8)'};
   background-color: ${(props) =>
-    props.theme === Theme.DARK ? "#313131" : "white"};
+    props.theme === Theme.DARK ? '#313131' : 'white'};
 
   &:focus {
     box-shadow: none;
@@ -121,10 +132,14 @@ export const Input = styled.input<IContactStyles>`
 export const TextArea = styled.textarea<IContactStyles>`
   border: none;
   border-bottom: ${(props) =>
-    props.theme === Theme.DARK ? " 4px solid white" : " 4px solid #313131"};
+    props.theme === Theme.DARK
+      ? ' 4px solid white'
+      : ' 4px solid #313131'};
   border-right: ${(props) =>
-    props.theme === Theme.DARK ? " 2px solid white" : " 2px solid #313131"};
-  font-family: "Montserrat", sans-serif;
+    props.theme === Theme.DARK
+      ? ' 2px solid white'
+      : ' 2px solid #313131'};
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 22px;
   resize: none;
@@ -132,10 +147,10 @@ export const TextArea = styled.textarea<IContactStyles>`
   min-width: 400px;
   color: ${(props) =>
     props.theme === Theme.DARK
-      ? "rgba(255, 255, 255, 1)"
-      : "rgba(0, 0, 0, 0.8)"};
+      ? 'rgba(255, 255, 255, 1)'
+      : 'rgba(0, 0, 0, 0.8)'};
   background-color: ${(props) =>
-    props.theme === Theme.DARK ? "#313131" : "white"};
+    props.theme === Theme.DARK ? '#313131' : 'white'};
 
   &:focus {
     box-shadow: none;
@@ -150,6 +165,7 @@ export const SubmitButton = styled.button<IContactStyles>`
   cursor: pointer;
 
   & > svg {
-    color: ${(props) => (props.theme === Theme.DARK ? "white" : "#313131")};
+    color: ${(props) =>
+      props.theme === Theme.DARK ? 'white' : '#313131'};
   }
 `;
