@@ -11,6 +11,7 @@ import ThemeContext from '../../context/Style';
 import { Page } from '../../types/Pages';
 import { Theme } from '../../types/Themes';
 import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
+import SoundContext from '../../context/Sound';
 
 interface ISplitBackground {
   children: ReactNode;
@@ -21,6 +22,7 @@ const SplitBackground = ({ children }: ISplitBackground) => {
   const transformCtx = useContext(TransformContext);
   const pageCtx = useContext(PageContext);
   const themeCtx = useContext(ThemeContext);
+  const soundCtx = useContext(SoundContext);
 
   const [isAnimatedLeft, setIsAnimatedLeft] = useState(false);
   const [isAnimatedRight, setIsAnimatedRight] = useState(false);
@@ -33,8 +35,9 @@ const SplitBackground = ({ children }: ISplitBackground) => {
       );
     }
 
-    if (!isAnimatedLeft) setIsAnimatedLeft(true);
-  }, []);
+    if (!isAnimatedLeft && !soundCtx.isAudioWindow)
+      setIsAnimatedLeft(true);
+  }, [soundCtx.isAudioWindow, isAnimatedLeft]);
 
   useEffect(() => {
     if (pageCtx.currentPage === Page.CONTACT && !isAnimatedRight)
@@ -48,7 +51,6 @@ const SplitBackground = ({ children }: ISplitBackground) => {
   }, [themeCtx.themeMode]);
 
   useEffect(() => {
-    console.log(themeCtx.themeMode);
     if (
       pageCtx.currentPage === Page.HOME ||
       pageCtx.currentPage === Page.ABOUT

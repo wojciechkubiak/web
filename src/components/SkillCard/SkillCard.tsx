@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import ThemeContext from '../../context/Style';
 import { Card, CardBody } from './SkillCardStyle';
+import { v4 as uuidv4 } from 'uuid';
 
 interface ISkillCard {
   text: string;
@@ -19,7 +20,7 @@ const SkillCard = ({ text, description }: ISkillCard) => {
         <h1>{firstLetterToUpperCase(text)}</h1>
         <div>
           {description?.map((d) => (
-            <p>{d}</p>
+            <p key={uuidv4()}>{d}</p>
           ))}
         </div>
       </CardBody>

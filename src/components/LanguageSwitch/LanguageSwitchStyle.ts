@@ -6,6 +6,7 @@ interface ILanguageSwitch {
   isActive?: boolean;
   theme: Theme;
   page?: Page;
+  isMarginLeft?: boolean;
 }
 
 export const LanguageSwitchContainer = styled.div<ILanguageSwitch>`
@@ -47,6 +48,7 @@ export const LanguageOption = styled.div<ILanguageSwitch>`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: ${(props) => props.isMarginLeft ? "8px" : "0"};
 
   & > p {
     color: ${(props) =>

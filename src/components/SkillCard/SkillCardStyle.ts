@@ -63,6 +63,5 @@ export const CardBody = styled.div<ICard>`
 
   & > div > p:last-child {
     border-bottom: ${(props) => props.theme === Theme.DARK ? "#313131" : "1px solid white"};
-
   }
 `;

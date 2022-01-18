@@ -12,6 +12,7 @@ import { Page } from '../../types/Pages';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import IconButton from '../../components/IconButton/IconButton';
 import ThemeContext from '../../context/Style';
+import { v4 as uuidv4 } from 'uuid';
 
 // import FlutterImg from '../../assets/images/flutter.png';
 // import ReactImg from '../../assets/images/react.png';
@@ -97,6 +98,7 @@ const Skills = ({ t }: ISkills) => {
         <SkillsContainer theme={themeCtx.themeMode}>
           {order.map((element) => (
             <SkillCard
+              key={uuidv4()}
               text={element.name}
               description={element.description}
             />
@@ -108,6 +110,7 @@ const Skills = ({ t }: ISkills) => {
         <SkillsContainer theme={themeCtx.themeMode}>
           {hire.map((element) => (
             <SkillCard
+              key={uuidv4()}
               text={element.name}
               description={element.description}
             />
