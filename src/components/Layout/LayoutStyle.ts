@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import BackgroundLeft from '../../assets/images/bgleft.jpeg';
-import BackgroundRight from '../../assets/images/bgright.jpeg';
+import BackgroundLeft from '../../assets/images/bgleftfhd.webp';
+import BackgroundRight from '../../assets/images/bgrightfhd.webp';
 import { Theme } from '../../types/Themes';
 
 interface ILayoutStyle {

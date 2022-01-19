@@ -10,7 +10,6 @@ import PageContext from '../../context/Page';
 import ThemeContext from '../../context/Style';
 import { Page } from '../../types/Pages';
 import { Theme } from '../../types/Themes';
-import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 import SoundContext from '../../context/Sound';
 
 interface ISplitBackground {

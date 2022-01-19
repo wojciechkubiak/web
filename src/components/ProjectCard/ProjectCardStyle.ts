@@ -54,7 +54,6 @@ export const ProjectsMobileCardContainer = styled.div<IProjectCard>`
   position: relative;
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
 
   @media only screen and (max-width: 1400px) {
     padding: 20px;
@@ -70,6 +69,7 @@ export const ProjectsMobileCardContainer = styled.div<IProjectCard>`
     max-width: 450px;
     transform: scale(0.95);
     border-bottom: 4px solid grey;
+    overflow-y: scroll;
   }
 `;
 
