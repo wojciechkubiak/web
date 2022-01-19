@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useWidth } from './hooks/useSize';
 import { withTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 import PageContext from './context/Page';
 import TransformContext from './context/Transform';
@@ -91,6 +92,15 @@ const App = (props: any) => {
 
   return (
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Wojciech Kubiak - Flutter / Frontend Developer</title>
+        <link rel="canonical" href="https://wojciechkubiak.com" />
+        <meta
+          name="description"
+          content="You're looking for a flutter or web developer? Check out my website and other social medias that can be found inside."
+        />
+      </Helmet>
       <ThemeContext.Provider
         value={{
           themeMode: themeMode,
