@@ -8,7 +8,11 @@ import Lottie from 'react-lottie';
 import ThemeContext from '../../context/Style';
 import AudioLottie from '../../components/AudioLottie/AudioLottie';
 
-const AudioPopup = () => {
+interface IAudioPopup {
+  t: any;
+}
+
+const AudioPopup = ({ t }: IAudioPopup) => {
   const soundCtx = useContext(SoundContext);
   const themeCtx = useContext(ThemeContext);
 
@@ -24,7 +28,7 @@ const AudioPopup = () => {
           soundCtx.setIsAudioWindow(false);
           localStorage.setItem('isInit', 'true');
         }}
-        text="Continue"
+        text={t('global.continue', { framework: 'react-i18next' })}
         isReversed={true}
       >
         <BsArrowRight size={64} />
@@ -35,7 +39,9 @@ const AudioPopup = () => {
           soundCtx.setIsAudioWindow(false);
           localStorage.setItem('isInit', 'true');
         }}
-        text="Continue with sound"
+        text={t('global.continue_sound', {
+          framework: 'react-i18next',
+        })}
         isReversed={true}
       >
         <BsArrowRight size={64} />

@@ -14,6 +14,7 @@ export const IndexPageContainer = styled.div`
   min-width: 100vw;
   height: 100%;
   min-height: 100vh;
+  max-height: 100vh;
   position: absolute; // TODO: may make some weird things
   overflow-x: hidden;
 `;

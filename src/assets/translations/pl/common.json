@@ -1,6 +1,9 @@
 {
   "global": {
-    "back": "Wstecz"
+    "back": "Wstecz",
+    "swipe": "Przeciągnij, by zobaczyć więcej",
+    "continue": "Kontynuuj",
+    "continue_sound": "Kontynuuj z dźwiękiem"
   },
   "home": {
     "find_out": "Dowiedz się więcej"
@@ -21,30 +24,30 @@
     "message": "Wiadomość"
   },
   "bio": {
-    "part1": "In my career I had opportunity to create ",
-    "bold1": "web",
-    "part2": " and ",
-    "bold2": "mobile applications",
-    "part3": ", both ",
-    "bold3": "client",
-    "part4": " and ",
-    "bold4": "server side",
-    "part5": ". Ok, but how it all started? I used to draw a lot in my childhood - and I am doing that until now. Later, in high school I was ",
-    "bold5": "creating building designs",
-    "part6": ". There was always that one particle inside of me which makes me enjoy ",
-    "bold6": "creating things",
-    "part7": ". After high school fate wanted me to start study programming. Of course the first thing that caught my eye was ",
-    "bold7": "web",
-    "part8": " and ",
-    "bold8": "mobile development",
-    "part9": ". From that first weeks - even days - all I'm doing is thinking about what fancy application I could do, that would be nice looking and functional. Currently ",
-    "bold9": "I accept various types of orders",
-    "part10": ", I am working full time job as a programmer - ",
+    "part1": "Podczas mojej kariery miałem okazję tworzyć ",
+    "bold1": "aplikacje webowe",
+    "part2": " oraz ",
+    "bold2": "na urządzenia mobilne",
+    "part3": ", zarówno ",
+    "bold3": "stronę klienta",
+    "part4": " jak i ",
+    "bold4": "serwerową",
+    "part5": ". Ok, ale jak to wszystko się zaczęło? Już od najmłodszych lat uwielbiałem rysować - robię to zresztą do dzisiaj. Później, w szkole średniej tworzyłem ",
+    "bold5": "projekty budynków",
+    "part6": ". Od zawsze była we mnie ta cząstka, która sprawia, że uwielbiam ",
+    "bold6": "tworzyć rzeczy",
+    "part7": ". Po szkole średniej los chciał, że zacząłem studiować programowanie. Oczywiście pierwsze co wpadło mi w oko było tworzenie ",
+    "bold7": "stron internetowych",
+    "part8": " oraz ",
+    "bold8": "aplikacji mobilnych",
+    "part9": ". Od pierwszych tygodni - a nawet dni - nie mogłem przestać zastanawiać się jaką wymyślną aplikację mógłbym stworzyć. Funkcjonalną oraz - oczywiście - ładnie wyglądającą. Aktualnie ",
+    "bold9": "akceptuję oferty różnego typu",
+    "part10": ", pracuję również na pełny etat jako programista - ",
     "bold10": "Mobile / Frontend Developer",
-    "part11": ", which allows me to earn a living while doing something I feel strong with, what makes my eyes shine. If you want to hire me or give me an assignment, so I can share my passion with you, ",
-    "bold11": "fill in the form",
-    "part12": " at the end of the website or just go into one of my social medias and ",
-    "bold12": "message me",
+    "part11": ", co pozwala mi nie tylko przeżyć, ale również zajmować się w życiu czymś, w czym czuję się mocny, co sprawia, że błyszczą mi się oczy na samą myśl o kolejnym dniu spędzonym przy projekcie. Jeśli chcesz mnie zatrudnić lub zlecić urealnienie Twego pomysłu - co pozwoli mi na podzielenie się z Tobą swoją pasją - ",
+    "bold11": "wypełnij formularz",
+    "part12": " na końcu strony lub wejdź w moje social media i ",
+    "bold12": "napisz do mnie",
     "part13": "."
   },
   "skills": [
@@ -138,6 +141,53 @@
     {
       "name": "backend/db",
       "description": ["Połączenie aplikacji z bazą jest katorgą? Mogę ci w tym pomóc - zarówno jeśli mowa o modelu bazy danych, jak również z samą komunikacją z uprzednio stworzoną bazą danych. Ze mną przechowywanie danych jest przyjemnością."]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AcareWeb",
+      "description":
+        "Strona internetowa pozwalająca na zarządzanie zwierzakami oraz ich dobrostanem przez sklepy zoologiczne oraz osoby prywatne. Technologie: NextJS, Prisma, PostgreSQL."
+    },
+    {
+      "name": "Energe",
+      "description":
+        "Strona internetowa dla niderladzkiej firmy renowacyjnej. Głównymi założeniami było zbieranie danych i wyliczenie nowych kosztów - na podstawie danych przechowywanych w ZOHO CRM - po przeprowadzeniu czynności."
+    },
+    {
+      "name": "Acare",
+      "description":
+        "Prywatny projekt nad którym aktualnie pracuję (wstrzymany). Aplikacja dla dzikich zwierząt, które nie potrafią się uspokoić (patrzy na swojego chomika-dzika)."
+    },
+    {
+      "name": "CopySearcher",
+      "description":
+        "(Projekt zespołowy) Aplikacja pozwalająca na sprawdzenie czy istnieje plagiat dla danego obrazu, artykułu lub wideo pod wybranymi przez nas adresami popularnych portali."
+    },
+    {
+      "name": "POTG",
+      "description":
+        "(Projekt zespołowy) Strona internetowa scrappująca informacje odnośnie możliwych przejazdów pozwalająca na rezerwację danej trasy - zwracając klientowi voucher."
+    },
+    {
+      "name": "Meditate",
+      "description":
+        "(Projekt Zespołowy) Aplikacja mobilna (wstrzymana - czekamy na zawartość od klienta) zawierająca w sobie różnego rodzaju ćwiczenia, w tym medytacje, afirmacje itd. Przechowuje ona również statystyki, które można potem wyświetlić na interaktywych wykresach."
+    },
+    {
+      "name": "ObbSys",
+      "description":
+        "Mój projekt inżynieryjny dla Centrum Badań Biomedycznych. Jego celem jest kolekcjonowanie oraz zarządzanie danymi, jak również wyświetlanie statystyk informując przy tym czy spożywany przez zwierzę pokarm oraz woda są w normie - czy zwierzę jest chore."
+    },
+    {
+      "name": "FitTracker",
+      "description":
+        "Wczesny projekt studencki pozwalający na dzielenie się danymi z dietetykiem oraz zarządzeniem przez dietetyka zamkniętą grupą podopiecznych."
+    },
+    {
+      "name": "Opqn",
+      "description":
+        "Bardzo wczesny projekt studencki - aplikacja webowa pozwalająca na przechowywanie swoich danych, wymiarów oraz wagi."
     }
   ]
 }

@@ -1,20 +1,113 @@
-import { useContext, useEffect, useState } from "react";
-import { ButtonsContainer, Container, Header } from "./ProjectsStyle";
-import PageContext from "../../context/Page";
-import { Page } from "../../types/Pages";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import IconButton from "../../components/IconButton/IconButton";
-import ThemeContext from "../../context/Style";
-
+import { useContext, useEffect, useState } from 'react';
+import { useWidth } from '../../hooks/useSize';
+import {
+  ButtonsContainer,
+  Container,
+  Header,
+  SwiperContainer,
+  SwiperInfo,
+  ButtonNav,
+} from './ProjectsStyle';
+import { IconBaseProps } from 'react-icons';
+import {
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
+} from 'react-icons/md';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import PageContext from '../../context/Page';
+import { Page } from '../../types/Pages';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import IconButton from '../../components/IconButton/IconButton';
+import ThemeContext from '../../context/Style';
+import { v4 as uuidv4 } from 'uuid';
+import 'swiper/css';
+import 'swiper/css/bundle';
+import { ProjectsArray, ProjectKey } from '../../types/Projects';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import Meditate from '../../assets/images/1m.png';
+import Energe from '../../assets/images/1w.png';
+import FitTracker from '../../assets/images/2m.png';
+import ObbSys from '../../assets/images/2w.png';
+import Acare from '../../assets/images/3m.png';
+import Opqn from '../../assets/images/3w.png';
+import CopySearcher from '../../assets/images/4w.png';
+import AcareWeb from '../../assets/images/5w.png';
+import POTG from '../../assets/images/6w.png';
 interface IProjects {
   t: any;
 }
 
+const projectImages: ProjectsArray = {
+  Meditate: {
+    img: Meditate,
+    isMobile: true,
+  },
+  Energe: {
+    img: Energe,
+    isMobile: false,
+  },
+  FitTracker: {
+    img: FitTracker,
+    isMobile: true,
+  },
+  ObbSys: {
+    img: ObbSys,
+    isMobile: false,
+  },
+  Acare: {
+    img: Acare,
+    isMobile: true,
+  },
+  Opqn: {
+    img: Opqn,
+    isMobile: false,
+  },
+  CopySearcher: {
+    img: CopySearcher,
+    isMobile: false,
+  },
+  AcareWeb: {
+    img: AcareWeb,
+    isMobile: false,
+  },
+  POTG: {
+    img: POTG,
+    isMobile: false,
+  },
+};
+
+export type Link = {
+  img: (props: IconBaseProps) => JSX.Element;
+  url: string;
+};
+
+export interface IProjectCard {
+  header: string;
+  img: string;
+  description: string;
+  isMobile: boolean;
+  links: Link[] | undefined;
+}
+
 const Projects = ({ t }: IProjects) => {
+  const width = useWidth() || 0;
+
   const pageCtx = useContext(PageContext);
   const themeCtx = useContext(ThemeContext);
+  const [projects, setProjects] = useState<Array<any>>([]);
+
+  const [swipe, setSwipe] = useState<any>();
 
   const [transform, setTransform] = useState<number>(150);
+
+  useEffect(() => {
+    setProjects(
+      t('projects', {
+        returnObjects: true,
+        framework: 'react-i18next',
+      }),
+    );
+  }, [t]);
 
   useEffect(() => {
     if (
@@ -32,18 +125,62 @@ const Projects = ({ t }: IProjects) => {
   return (
     <Container transform={transform}>
       <Header theme={themeCtx.themeMode}>
-        {t("pages.projects", { framework: "react-i18next" })}
+        {t('pages.projects', { framework: 'react-i18next' })}
       </Header>
+      <SwiperContainer>
+        <Swiper
+          slidesPerView={width > 1352 ? 2 : 1}
+          loop={true}
+          onBeforeInit={(swipper) => setSwipe(swipper)}
+        >
+          {projects?.map((value) => {
+            const pKey: ProjectKey = value.name;
+
+            const isMobile: boolean = projectImages[pKey]?.isMobile;
+            const img: string = projectImages[pKey]?.img;
+
+            return (
+              <SwiperSlide key={uuidv4()}>
+                <ProjectCard
+                  key={uuidv4()}
+                  header={value.name}
+                  img={img}
+                  description={value.description}
+                  links={[]}
+                  isMobile={isMobile}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </SwiperContainer>
+      <SwiperInfo>
+        {t('global.swipe', { framework: 'react-i18next' })}
+      </SwiperInfo>
+      <ButtonNav
+        onClick={() => swipe?.slidePrev()}
+        isLeft={true}
+        theme={themeCtx.themeMode}
+      >
+        <MdKeyboardArrowLeft />
+      </ButtonNav>
+      <ButtonNav
+        onClick={() => swipe?.slideNext()}
+        isLeft={false}
+        theme={themeCtx.themeMode}
+      >
+        <MdKeyboardArrowRight />
+      </ButtonNav>
       <ButtonsContainer>
         <IconButton
           onClick={() => pageCtx.setCurrentPage(Page.ABOUT)}
-          text={t("global.back", { framework: "react-i18next" })}
+          text={t('global.back', { framework: 'react-i18next' })}
         >
           <BsArrowLeft size={64} />
         </IconButton>
         <IconButton
           onClick={() => pageCtx.setCurrentPage(Page.SKILLS)}
-          text={t("pages.skills", { framework: "react-i18next" })}
+          text={t('pages.skills', { framework: 'react-i18next' })}
           isReversed={true}
         >
           <BsArrowRight size={64} />

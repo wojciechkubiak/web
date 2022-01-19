@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { withTranslation } from 'react-i18next';
 
 import PageContext from './context/Page';
@@ -23,7 +23,7 @@ import AudioFile from './assets/audio/spring_in_my_step.mp3';
 
 const App = (props: any) => {
   const { t, i18n } = props;
-  const [lang, setLang] = useState<string>('en');
+  const [lang, setLang] = useState<string>('pl');
 
   const [transform, setTransform] = useState<number>(0);
   const [page, setPage] = useState<Page>(Page.HOME);
@@ -120,7 +120,7 @@ const App = (props: any) => {
               </Layout>
               <ThemeSwitch />
               <LanguageSwitch />
-              {isAudioWindow && <AudioPopup />}
+              {isAudioWindow && <AudioPopup t={t} />}
             </TransformContext.Provider>
           </SoundContext.Provider>
         </PageContext.Provider>

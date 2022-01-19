@@ -11,6 +11,7 @@ export const Container = styled.div<ISkillsStyles>`
   min-width: 100vw;
   height: 100%;
   min-height: 100vh;
+  max-height: 100vh;
   transition: 1000ms transform;
   position: absolute; // TODO: may make some weird things
   overflow-x: hidden;
