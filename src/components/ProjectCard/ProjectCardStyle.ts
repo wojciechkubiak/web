@@ -25,6 +25,7 @@ export const ProjectsWebCardContainer = styled.div<IProjectCard>`
     max-width: 450px;
     min-height: 420px;
     transform: scale(0.95);
+    border-bottom: 4px solid grey;
   }
 `;
 
@@ -53,6 +54,7 @@ export const ProjectsMobileCardContainer = styled.div<IProjectCard>`
   position: relative;
   display: flex;
   flex-direction: row;
+  overflow-y: scroll;
 
   @media only screen and (max-width: 1400px) {
     padding: 20px;
@@ -67,6 +69,7 @@ export const ProjectsMobileCardContainer = styled.div<IProjectCard>`
     width: 100%;
     max-width: 450px;
     transform: scale(0.95);
+    border-bottom: 4px solid grey;
   }
 `;
 
@@ -78,9 +81,10 @@ export const CardMobileImage = styled.img<IProjectCard>`
   // border: 5px solid #33333d;
   position: relative;
   z-index: 500;
-  @media only screen and (max-width: 700px) {
-    width: 160px;
-    height: 320px;
+
+  @media only screen and (max-width: 920px) {
+    width: 320px;
+    height: 640px;
   }
 `;
 
@@ -134,5 +138,6 @@ export const Info = styled.div<IProjectCard>`
   @media screen and (max-width: 920px) {
     box-shadow: none;
     transform: translate(0, -4px);
+    width: ${(props) => (props.isMobile ? '80%' : 'auto')};
   }
 `;

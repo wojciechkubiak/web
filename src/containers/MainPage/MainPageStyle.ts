@@ -33,6 +33,11 @@ export const MainPage = styled.div<IMainPageStyle>`
   transition: 1000ms;
   transform: ${(props) =>
     props.isActive ? 'translateX(0%)' : 'translateX(-150%)'};
+
+  @media screen and (max-width: 920px) {
+    height: 90%;
+    min-height: 90vh;
+  }
 `;
 
 export const Headers = styled.div`

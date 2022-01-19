@@ -29,6 +29,15 @@ export const Container = styled.div<IProjectsStyles>`
     max-height: none;
     height: auto;
   }
+
+  @media screen and (max-width: 920px) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: 920px) and (max-height: 700px) {
+    transform: ${(props) =>
+      `translateX(${props.transform}%) scale(0.6)`};
+  }
 `;
 
 export const Header = styled.h1<IProjectsStyles>`
@@ -81,6 +90,6 @@ export const ButtonNav = styled.button<IProjectsStyles>`
   }
 
   @media screen and (max-width: 920px) {
-    top: 78%;
+    top: 81%;
   }
 `;
