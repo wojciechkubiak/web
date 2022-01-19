@@ -3,8 +3,6 @@ import { BsArrowRight } from 'react-icons/bs';
 import IconButton from '../../components/IconButton/IconButton';
 import SoundContext from '../../context/Sound';
 import { AudioAnimation, AudioContainer } from './AudioPopupStyle';
-
-import Lottie from 'react-lottie';
 import ThemeContext from '../../context/Style';
 import AudioLottie from '../../components/AudioLottie/AudioLottie';
 

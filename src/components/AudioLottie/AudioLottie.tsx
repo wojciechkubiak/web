@@ -1,9 +1,10 @@
 import SoundData from '../../assets/lotties/sound.json';
-import Lottie from 'react-lottie';
-import { useContext } from 'react';
+// import Lottie from 'react-lottie';
+import lottie from 'lottie-web';
+import { useContext, useEffect, useRef, useState } from 'react';
 import SoundContext from '../../context/Sound';
 import CrossingLine from '../CrossingLine/CrossingLine';
-import { Container } from './AudioLottieStyle';
+import { Container, Lottie } from './AudioLottieStyle';
 
 interface IAudioLottie {
   width?: number;
@@ -17,33 +18,33 @@ const AudioLottie = ({
   isInteractive = false,
 }: IAudioLottie) => {
   const soundCtx = useContext(SoundContext);
+  let lottieRef = useRef(
+    null,
+  ) as React.MutableRefObject<HTMLDivElement | null>;
+  const [opacity, setOpacity] = useState<number>(
+    soundCtx.isAudio || !isInteractive ? 1 : 0.6,
+  );
 
-  const animationOptions = {
-    loop: true,
-    autoplay: !isInteractive || soundCtx.isAudio,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-    animationData: SoundData,
-  };
+  useEffect(() => {
+    if (lottieRef.current) {
+      lottie.loadAnimation({
+        container: lottieRef.current,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: SoundData,
+      });
+    }
+  }, []);
 
   const handleClick = () => {
-    if (isInteractive) {
-      soundCtx.setIsAudio(!soundCtx.isAudio);
-    }
-    console.log(soundCtx.isAudio);
+    soundCtx.setIsAudio(!soundCtx.isAudio);
+    setOpacity(soundCtx.isAudio ? 0.6 : 1);
   };
 
   return (
     <Container style={{ position: 'relative' }} onClick={handleClick}>
-      <Lottie
-        isClickToPauseDisabled={!isInteractive}
-        options={animationOptions}
-        height={width}
-        width={height}
-        isStopped={false}
-        isPaused={!soundCtx.isAudio}
-      />
+      <Lottie size={width} opacity={opacity} ref={lottieRef} />
       {!soundCtx.isAudio && isInteractive && <CrossingLine />}
     </Container>
   );
