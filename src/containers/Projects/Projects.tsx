@@ -1,5 +1,18 @@
 import { useContext, useEffect, useState } from 'react';
+import { IconBaseProps } from 'react-icons';
 import { useWidth } from '../../hooks/useSize';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { v4 as uuidv4 } from 'uuid';
+
+import {
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
+} from 'react-icons/md';
+
+import PageContext from '../../context/Page';
+import ThemeContext from '../../context/Style';
+
 import {
   ButtonsContainer,
   Container,
@@ -8,21 +21,9 @@ import {
   SwiperInfo,
   ButtonNav,
 } from './ProjectsStyle';
-import { IconBaseProps } from 'react-icons';
-import {
-  MdKeyboardArrowLeft,
-  MdKeyboardArrowRight,
-} from 'react-icons/md';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import PageContext from '../../context/Page';
 import { Page } from '../../types/Pages';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
-import IconButton from '../../components/IconButton/IconButton';
-import ThemeContext from '../../context/Style';
-import { v4 as uuidv4 } from 'uuid';
-import 'swiper/css';
-import 'swiper/css/bundle';
 import { ProjectsArray, ProjectKey } from '../../types/Projects';
+import IconButton from '../../components/IconButton/IconButton';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import Meditate from '../../assets/images/1m.png';
 import Energe from '../../assets/images/1w.png';
@@ -33,6 +34,10 @@ import Opqn from '../../assets/images/3w.png';
 import CopySearcher from '../../assets/images/4w.png';
 import AcareWeb from '../../assets/images/5w.png';
 import POTG from '../../assets/images/6w.png';
+
+import 'swiper/css';
+import 'swiper/css/bundle';
+
 interface IProjects {
   t: any;
 }
@@ -94,10 +99,9 @@ const Projects = ({ t }: IProjects) => {
 
   const pageCtx = useContext(PageContext);
   const themeCtx = useContext(ThemeContext);
+
   const [projects, setProjects] = useState<Array<any>>([]);
-
   const [swipe, setSwipe] = useState<any>();
-
   const [transform, setTransform] = useState<number>(150);
 
   useEffect(() => {

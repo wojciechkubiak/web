@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { Page } from '../../types/Pages';
 import { Theme } from '../../types/Themes';
 

@@ -1,6 +1,8 @@
-import { ButtonText, IconButtonS } from "./IconButtonStyle";
-import { ReactNode, useContext } from "react";
-import ThemeContext from "../../context/Style";
+import { ReactNode, useContext } from 'react';
+
+import ThemeContext from '../../context/Style';
+
+import { ButtonText, IconButtonS } from './IconButtonStyle';
 
 interface IIconButton {
   children: ReactNode;

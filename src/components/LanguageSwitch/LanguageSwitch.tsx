@@ -1,21 +1,23 @@
+import { useContext, useState } from 'react';
+
 import { Theme } from '../../types/Themes';
+
+import ThemeContext from '../../context/Style';
+import PageContext from '../../context/Page';
+import SoundContext from '../../context/Sound';
+
 import {
   LanguageOption,
   LanguageSwitchContainer,
 } from './LanguageSwitchStyle';
-import { useContext, useEffect, useState } from 'react';
-import ThemeContext from '../../context/Style';
-import PageContext from '../../context/Page';
 import AudioLottie from '../AudioLottie/AudioLottie';
-import SoundContext from '../../context/Sound';
-
-const languages = ['en', 'pl'];
 
 const LanguageSwitch = () => {
-  const [showOptions, setShowOptions] = useState<boolean>(false);
   const themeCtx = useContext(ThemeContext);
   const pageCtx = useContext(PageContext);
   const soundCtx = useContext(SoundContext);
+
+  const [showOptions, setShowOptions] = useState<boolean>(false);
 
   return (
     <LanguageSwitchContainer

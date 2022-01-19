@@ -1,4 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
+import { BsArrowRight } from 'react-icons/bs';
+
+import ThemeContext from '../../context/Style';
+import SoundContext from '../../context/Sound';
+import PageContext from '../../context/Page';
+
+import { Page } from '../../types/Pages';
+
 import {
   Header,
   Headers,
@@ -7,13 +15,8 @@ import {
   Subheader,
   ButtonContainer,
 } from './MainPageStyle';
-import PageContext from '../../context/Page';
 import IconButton from '../../components/IconButton/IconButton';
-import { BsArrowRight } from 'react-icons/bs';
-import { Page } from '../../types/Pages';
-import ThemeContext from '../../context/Style';
 import Bio from '../Bio/Bio';
-import SoundContext from '../../context/Sound';
 
 interface IMainPage {
   t: any;
@@ -28,7 +31,6 @@ const MainPage = ({ t }: IMainPage) => {
   const [isSubheaderAnimated, setIsSubheaderAnimated] =
     useState(false);
   const [isButtonAnimated, setIsButtonAnimated] = useState(false);
-
   const [isReversed, setIsReversed] = useState(false);
 
   useEffect(() => {

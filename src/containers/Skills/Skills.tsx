@@ -1,4 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+
+import PageContext from '../../context/Page';
+import ThemeContext from '../../context/Style';
+
+import { Page } from '../../types/Pages';
+
 import {
   ButtonsContainer,
   Container,
@@ -7,12 +15,7 @@ import {
   SkillsContainer,
 } from './SkillsStyle';
 import SkillCard from '../../components/SkillCard/SkillCard';
-import PageContext from '../../context/Page';
-import { Page } from '../../types/Pages';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import IconButton from '../../components/IconButton/IconButton';
-import ThemeContext from '../../context/Style';
-import { v4 as uuidv4 } from 'uuid';
 
 interface ISkills {
   t: any;

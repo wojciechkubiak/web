@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { Theme } from "../../types/Themes";
+import styled from 'styled-components';
+
+import { Theme } from '../../types/Themes';
 
 interface IAudioContainer {
   theme: Theme;
@@ -23,34 +24,34 @@ export const AudioContainer = styled.div<IAudioContainer>`
   top: 50%;
   z-index: 2000;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 40px;
 
   @media screen and (max-width: 1600px) {
     transform: translate(-50%, -50%) scale(0.8);
   }
 
-  @media screen and (max-width: 920px) { 
+  @media screen and (max-width: 920px) {
     transform: translate(-50%, -50%) scale(0.5);
   }
-`
+`;
 
 export const AudioAnimation = styled.div`
   margin: 32px 0;
 `;
 
 export const Icons = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const Subinfo = styled.p`
-    color: grey;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    text-align: end;
-    width: 100%;
-    margin: 0 !important;
-`
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: end;
+  width: 100%;
+  margin: 0 !important;
+`;

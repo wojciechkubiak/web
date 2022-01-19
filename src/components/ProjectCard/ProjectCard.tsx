@@ -1,13 +1,12 @@
 import { useContext } from 'react';
 import { IconBaseProps } from 'react-icons';
 import { v4 as uuidv4 } from 'uuid';
+
 import ThemeContext from '../../context/Style';
 import {
   ProjectsMobileCardContainer,
   CardMobileImage,
-  ProjectMobileLinks,
   ProjectsWebCardContainer,
-  ProjectWebLinks,
   CardWebImage,
   Info,
 } from './ProjectCardStyle';

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { Theme } from '../../types/Themes';
 
 interface IProjectsStyles {
@@ -10,9 +11,7 @@ interface IProjectsStyles {
 export const Container = styled.div<IProjectsStyles>`
   width: 50%;
   min-width: 100vw;
-  // height: 100%;
   min-height: 100vh;
-  // max-height: 100vh;
   transition: 1000ms transform;
   position: absolute; // TODO: may make some weird things
   overflow: hidden;

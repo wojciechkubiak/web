@@ -1,22 +1,24 @@
 import { ReactNode, useContext, useEffect, useState } from 'react';
+
+import TransformContext from '../../context/Transform';
+import PageContext from '../../context/Page';
+import ThemeContext from '../../context/Style';
+import SoundContext from '../../context/Sound';
+
+import { Page } from '../../types/Pages';
+import { Theme } from '../../types/Themes';
+
 import {
   Background,
   ColorBackground,
   Container,
   Global,
 } from './LayoutStyle';
-import TransformContext from '../../context/Transform';
-import PageContext from '../../context/Page';
-import ThemeContext from '../../context/Style';
-import { Page } from '../../types/Pages';
-import { Theme } from '../../types/Themes';
-import SoundContext from '../../context/Sound';
 
 interface ISplitBackground {
   children: ReactNode;
 }
 
-//0-25-50
 const SplitBackground = ({ children }: ISplitBackground) => {
   const transformCtx = useContext(TransformContext);
   const pageCtx = useContext(PageContext);
@@ -36,6 +38,7 @@ const SplitBackground = ({ children }: ISplitBackground) => {
 
     if (!isAnimatedLeft && !soundCtx.isAudioWindow)
       setIsAnimatedLeft(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [soundCtx.isAudioWindow, isAnimatedLeft]);
 
   useEffect(() => {
@@ -43,6 +46,7 @@ const SplitBackground = ({ children }: ISplitBackground) => {
       setTimeout(() => {
         setIsAnimatedRight(true);
       }, 500);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageCtx]);
 
   useEffect(() => {
@@ -85,7 +89,6 @@ const SplitBackground = ({ children }: ISplitBackground) => {
         isLeft={false}
         isAnimated={isAnimatedRight}
       />
-
       {children}
     </Container>
   );

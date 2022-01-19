@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
-import IconButton from '../../components/IconButton/IconButton';
+
 import SoundContext from '../../context/Sound';
 import {
   AudioAnimation,
@@ -9,6 +9,8 @@ import {
   Subinfo,
 } from './AudioPopupStyle';
 import ThemeContext from '../../context/Style';
+
+import IconButton from '../../components/IconButton/IconButton';
 import AudioLottie from '../../components/AudioLottie/AudioLottie';
 
 interface IAudioPopup {

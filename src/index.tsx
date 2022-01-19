@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import common_pl from './assets/translations/pl/common.json';
 import common_en from './assets/translations/en/common.json';
 
+import './index.css';
 // noinspection JSIgnoredPromiseFromCall
 i18next.init({
   interpolation: { escapeValue: false },

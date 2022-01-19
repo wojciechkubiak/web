@@ -1,8 +1,11 @@
 import { useContext } from 'react';
+
+import { GiSettingsKnobs } from 'react-icons/gi';
+
 import ThemeContext from '../../context/Style';
+
 import { Theme } from '../../types/Themes';
 import { Container } from './HideShowSwitchStyle';
-import { GiSettingsKnobs } from 'react-icons/gi';
 
 interface IHideShowSwitch {
   isOn: boolean;

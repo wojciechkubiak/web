@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useWidth } from './hooks/useSize';
 import { withTranslation } from 'react-i18next';
 
 import PageContext from './context/Page';
@@ -14,14 +15,14 @@ import Projects from './containers/Projects/Projects';
 import Skills from './containers/Skills/Skills';
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
 import LanguageSwitch from './components/LanguageSwitch/LanguageSwitch';
-
-import './App.css';
 import Contact from './containers/Contact/Contact';
 import SoundContext from './context/Sound';
 import AudioPopup from './containers/AudioPopup/AudioPopup';
+
 import AudioFile from './assets/audio/spring_in_my_step.mp3';
-import { useWidth } from './hooks/useSize';
 import HideShowSwitch from './components/HideShowSwitch/HideShowSwitch';
+
+import './App.css';
 
 const App = (props: any) => {
   const { t, i18n } = props;

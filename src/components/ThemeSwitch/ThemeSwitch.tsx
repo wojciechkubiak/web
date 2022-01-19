@@ -1,9 +1,14 @@
-import { Theme } from "../../types/Themes";
-import { ThemeOption, ThemeSwitchContainer } from "./ThemeSwitchStyle";
-import { FaMoon, FaSun } from "react-icons/fa";
-import { useContext } from "react";
-import ThemeContext from "../../context/Style";
-import PageContext from "../../context/Page";
+import { useContext } from 'react';
+import { FaMoon, FaSun } from 'react-icons/fa';
+
+import ThemeContext from '../../context/Style';
+import PageContext from '../../context/Page';
+
+import { Theme } from '../../types/Themes';
+import {
+  ThemeOption,
+  ThemeSwitchContainer,
+} from './ThemeSwitchStyle';
 
 const ThemeSwitch = () => {
   const themeCtx = useContext(ThemeContext);

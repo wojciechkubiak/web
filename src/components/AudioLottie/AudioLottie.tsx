@@ -1,10 +1,11 @@
-import SoundData from '../../assets/lotties/sound.json';
-// import Lottie from 'react-lottie';
-import lottie from 'lottie-web';
 import { useContext, useEffect, useRef, useState } from 'react';
+import lottie from 'lottie-web';
+
+import { Container, Lottie } from './AudioLottieStyle';
 import SoundContext from '../../context/Sound';
 import CrossingLine from '../CrossingLine/CrossingLine';
-import { Container, Lottie } from './AudioLottieStyle';
+
+import SoundData from '../../assets/lotties/sound.json';
 
 interface IAudioLottie {
   width?: number;
@@ -17,10 +18,12 @@ const AudioLottie = ({
   height = 78,
   isInteractive = false,
 }: IAudioLottie) => {
-  const soundCtx = useContext(SoundContext);
   let lottieRef = useRef(
     null,
   ) as React.MutableRefObject<HTMLDivElement | null>;
+
+  const soundCtx = useContext(SoundContext);
+
   const [opacity, setOpacity] = useState<number>(
     soundCtx.isAudio || !isInteractive ? 1 : 0.6,
   );
@@ -43,7 +46,7 @@ const AudioLottie = ({
   };
 
   return (
-    <Container style={{ position: 'relative' }} onClick={handleClick}>
+    <Container onClick={handleClick}>
       <Lottie size={width} opacity={opacity} ref={lottieRef} />
       {!soundCtx.isAudio && isInteractive && <CrossingLine />}
     </Container>

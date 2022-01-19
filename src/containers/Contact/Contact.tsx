@@ -1,21 +1,33 @@
-import { FormEvent, useContext, useEffect, useState } from "react";
+import { FormEvent, useContext, useEffect, useState } from 'react';
+import { BsArrowLeft } from 'react-icons/bs';
+import {
+  FaDeviantart,
+  FaGit,
+  FaFacebook,
+  FaLinkedin,
+} from 'react-icons/fa';
+import { FiSend } from 'react-icons/fi';
+import axios from 'axios';
 
-import axios from "axios";
-import ThemeContext from "../../context/Style";
-import PageContext from "../../context/Page";
-import { Page } from "../../types/Pages";
-import { BsArrowLeft } from "react-icons/bs";
-import { FaDeviantart, FaGit, FaFacebook, FaLinkedin } from "react-icons/fa";
-import { FiSend } from "react-icons/fi";
+import ThemeContext from '../../context/Style';
+import PageContext from '../../context/Page';
+
+import { Page } from '../../types/Pages';
+
 import {
   Container,
   Form,
   FormContainer,
   SocialContainer,
   Socials,
-} from "./ContactStyle";
-import { Header, Input, TextArea, SubmitButton } from "./ContactStyle";
-import IconButton from "../../components/IconButton/IconButton";
+} from './ContactStyle';
+import {
+  Header,
+  Input,
+  TextArea,
+  SubmitButton,
+} from './ContactStyle';
+import IconButton from '../../components/IconButton/IconButton';
 
 interface IContact {
   t: any;
@@ -28,9 +40,9 @@ type Message = {
 };
 
 const defaultMessage: Message = {
-  email: "",
-  subject: "",
-  message: "",
+  email: '',
+  subject: '',
+  message: '',
 };
 
 const Contact = ({ t }: IContact) => {
@@ -49,13 +61,16 @@ const Contact = ({ t }: IContact) => {
     }
   }, [pageCtx]);
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>, message: Message): void => {
+  const onSubmit = (
+    e: FormEvent<HTMLFormElement>,
+    message: Message,
+  ): void => {
     e.preventDefault();
 
     if (message.message && message.subject && message.email) {
       setDisabled(true);
       axios
-        .post("https://priv-email-sender.herokuapp.com/", message)
+        .post('https://priv-email-sender.herokuapp.com/', message)
         .then((resp) => {
           setDisabled(false);
           setMessage(defaultMessage);
@@ -70,7 +85,9 @@ const Contact = ({ t }: IContact) => {
     console.log(message);
   };
 
-  const onChange = (e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const onChange = (
+    e: FormEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const element = e.currentTarget as HTMLInputElement;
 
     setMessage((prevState) => ({
@@ -80,7 +97,7 @@ const Contact = ({ t }: IContact) => {
   };
 
   const onIconClicked = (value: string) => {
-    window.open(value, "_blank");
+    window.open(value, '_blank');
   };
 
   return (
@@ -88,17 +105,19 @@ const Contact = ({ t }: IContact) => {
       <FormContainer theme={themeCtx.themeMode}>
         <IconButton
           onClick={() => pageCtx.setCurrentPage(Page.SKILLS)}
-          text={t("global.back", { framework: "react-i18next" })}
+          text={t('global.back', { framework: 'react-i18next' })}
         >
           <BsArrowLeft size={64} />
         </IconButton>
         <Header theme={themeCtx.themeMode}>
-          {t("pages.contact", { framework: "react-i18next" })}
+          {t('pages.contact', { framework: 'react-i18next' })}
         </Header>
         <Form onSubmit={(event) => onSubmit(event, message)}>
           <Input
             name="email"
-            placeholder={t("form.email", { framework: "react-i18next" })}
+            placeholder={t('form.email', {
+              framework: 'react-i18next',
+            })}
             value={message.email}
             onChange={onChange}
             minLength={2}
@@ -109,7 +128,9 @@ const Contact = ({ t }: IContact) => {
           />
           <Input
             name="subject"
-            placeholder={t("form.subject", { framework: "react-i18next" })}
+            placeholder={t('form.subject', {
+              framework: 'react-i18next',
+            })}
             value={message.subject}
             onChange={onChange}
             minLength={2}
@@ -119,7 +140,9 @@ const Contact = ({ t }: IContact) => {
           />
           <TextArea
             name="message"
-            placeholder={t("form.message", { framework: "react-i18next" })}
+            placeholder={t('form.message', {
+              framework: 'react-i18next',
+            })}
             value={message.message}
             onChange={onChange}
             minLength={32}
@@ -140,24 +163,30 @@ const Contact = ({ t }: IContact) => {
           <FaLinkedin
             size={42}
             onClick={() =>
-              onIconClicked("https://www.linkedin.com/in/wojciechkubiakin")
+              onIconClicked(
+                'https://www.linkedin.com/in/wojciechkubiakin',
+              )
             }
           />
           <FaGit
             size={42}
             onClick={() =>
-              onIconClicked("https://www.github.com/wojciechkubiak")
+              onIconClicked('https://www.github.com/wojciechkubiak')
             }
           />
           <FaFacebook
             size={42}
             onClick={() =>
-              onIconClicked("https://www.facebook.com/wojciechkubiakfb")
+              onIconClicked(
+                'https://www.facebook.com/wojciechkubiakfb',
+              )
             }
           />
           <FaDeviantart
             size={42}
-            onClick={() => onIconClicked("https://deviantart.com/biakku")}
+            onClick={() =>
+              onIconClicked('https://deviantart.com/biakku')
+            }
           />
         </Socials>
       </SocialContainer>
