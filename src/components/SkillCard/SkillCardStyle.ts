@@ -20,7 +20,15 @@ export const Card = styled.div<ICard>`
   position: relative;
   border: 3px solid grey;
   background-color: ${(props) => props.theme === Theme.DARK ? "#313131" : "white"};
-`
+
+  @media screen and (max-width: 1600px) {
+    transform: scale(0.9);
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 100%;
+  }
+  `
 
 export const CardImage = styled.img`
   height: 42px;
@@ -48,7 +56,6 @@ export const CardBody = styled.div<ICard>`
     font-weight: 600;
     text-align: center;
     border-bottom: 4px solid #964c79;
-
   }
 
   & > div > p {
@@ -63,5 +70,11 @@ export const CardBody = styled.div<ICard>`
 
   & > div > p:last-child {
     border-bottom: ${(props) => props.theme === Theme.DARK ? "#313131" : "1px solid white"};
+  }
+
+  @media screen and (max-width: 920px) {
+    & > h1 {
+      font-size: 36px;
+    }
   }
 `;

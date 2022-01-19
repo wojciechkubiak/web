@@ -1,7 +1,7 @@
-import styled, { createGlobalStyle } from "styled-components";
-import BackgroundLeft from "../../assets/images/bgleft.jpeg";
-import BackgroundRight from "../../assets/images/bgright.jpeg";
-import { Theme } from "../../types/Themes";
+import styled, { createGlobalStyle } from 'styled-components';
+import BackgroundLeft from '../../assets/images/bgleft.jpeg';
+import BackgroundRight from '../../assets/images/bgright.jpeg';
+import { Theme } from '../../types/Themes';
 
 interface ILayoutStyle {
   isLeft?: boolean;
@@ -15,13 +15,12 @@ export const Global = createGlobalStyle<ILayoutStyle>`
   body {
     background-color: white;
     height: 100vh !important;
-    overflow-x: hidden;
+    overflow: hidden !important;
   }
   
   body, h1 {
     margin: 0 !important;
   }
-
 
   /* width */
   ::-webkit-scrollbar {
@@ -30,7 +29,8 @@ export const Global = createGlobalStyle<ILayoutStyle>`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme === Theme.DARK ? "#515151" : "#f1f1f1"};
+    background: ${(props) =>
+      props.theme === Theme.DARK ? '#515151' : '#f1f1f1'};
   }
 
   /* Handle */
@@ -70,18 +70,25 @@ export const Background = styled.div<ILayoutStyle>`
   min-height: 100vh;
   margin: 0 !important;
   background-image: ${(props) =>
-    props.isLeft ? `url(${BackgroundLeft})` : `url(${BackgroundRight})`};
+    props.isLeft
+      ? `url(${BackgroundLeft})`
+      : `url(${BackgroundRight})`};
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: ${(props) => (props.isAnimated ? "105%" : "100%")};
+  background-size: ${(props) => (props.isAnimated ? '105%' : '100%')};
   background-repeat: no-repeat;
   overflow: hidden;
   transition: 1500ms;
-  filter: ${(props) => (props.isDarkMode ? "grayscale(1)" : "none")};
+  filter: ${(props) => (props.isDarkMode ? 'grayscale(1)' : 'none')};
 
   @media screen and (max-width: 1510px) {
     background-size: cover;
+  }
+
+  @media screen and (max-width: 920px) {
+    min-width: 100vw;
+    width: 100%;
   }
 `;
 
@@ -89,9 +96,11 @@ export const ColorBackground = styled.div<ILayoutStyle>`
   min-width: 100vw;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   min-height: 100vh;
   margin: 0 !important;
-  background-color: ${(props) => (props.isDarkMode ? "#313131" : "white")};
+  background-color: ${(props) =>
+    props.isDarkMode ? '#313131' : 'white'};
   transition: 500ms transform;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,

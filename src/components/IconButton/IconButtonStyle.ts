@@ -27,6 +27,10 @@ export const IconButtonS = styled.button<IIconButton>`
     border-bottom: 4px solid
       ${(props) => (props.theme === Theme.DARK ? "white" : "#313131")};
   }
+
+  @media screen and (max-width: 1600px) {
+    transform: scale(0.8);
+  }
 `;
 
 export const ButtonText = styled.h4<IIconButton>`

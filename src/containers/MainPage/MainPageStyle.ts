@@ -40,6 +40,11 @@ export const Headers = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 920px) {
+    min-height: 200px;
+    align-items: center;
+  }
 `;
 
 export const Header = styled.h1<IMainPageStyle>`
@@ -73,6 +78,46 @@ export const Header = styled.h1<IMainPageStyle>`
         ? 'translateX(0%) scale(0.8)'
         : 'translateX(150%) scale(0.8)'};
   }
+
+  @media screen and (max-width: 1420px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.6)'
+        : 'translateX(150%) scale(0.6)'};
+  }
+
+  @media screen and (max-width: 1200px) {
+    left: 120px;
+    font-size: 6rem;
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.9)'
+        : 'translateX(250%) scale(0.9)'};
+  }
+
+  @media screen and (max-width: 920px) {
+    left: 0;
+    font-size: 6rem;
+    text-align: center;
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.7)'
+        : 'translateX(250%) scale(0.7)'};
+  }
+
+  @media screen and (min-width: 1921px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(1.2)'
+        : 'translateX(150%) scale(1.2)'};
+  }
+
+  @media screen and (min-width: 2160px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(2)'
+        : 'translateX(150%) scale(2)'};
+  }
 `;
 
 export const Subheader = styled.h1<IMainPageStyle>`
@@ -98,10 +143,51 @@ export const Subheader = styled.h1<IMainPageStyle>`
     props.isAnimated ? 'translateX(0%)' : 'translateX(150%)'};
 
   @media screen and (max-width: 1600px) {
+    left: 380px;
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(0.8)'
         : 'translateX(150%) scale(0.8)'};
+  }
+
+  @media screen and (max-width: 1420px) {
+    left: 320px;
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.6)'
+        : 'translateX(150%) scale(0.6)'};
+  }
+
+  @media screen and (max-width: 1200px) {
+    left: 240px;
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.7)'
+        : 'translateX(250%) scale(0.7)'};
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 70%;
+    left: 0;
+    text-align: center;
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.6)'
+        : 'translateX(250%) scale(0.6)'};
+  }
+
+  @media screen and (min-width: 1921px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(1.2)'
+        : 'translateX(150%) scale(1.2)'};
+  }
+
+  @media screen and (min-width: 2160px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(2)'
+        : 'translateX(150%) scale(2)'};
   }
 `;
 
@@ -111,4 +197,61 @@ export const ButtonContainer = styled.div<IMainPageStyle>`
   transition: 1000ms;
   transform: ${(props) =>
     props.isAnimated ? 'translateX(0%)' : 'translateX(250%)'};
+
+  @media screen and (max-width: 1600px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.8)'
+        : 'translateX(250%) scale(0.8)'};
+  }
+
+  @media screen and (max-width: 1420px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.7)'
+        : 'translateX(250%) scale(0.7)'};
+  }
+
+  @media screen and (max-width: 1200px) {
+    left: 300px;
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(1)'
+        : 'translateX(250%) scale(1)'};
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 90%;
+    left: 0;
+    text-align: center;
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(0.8)'
+        : 'translateX(250%) scale(0.8)'};
+    background-color: #adb757;
+
+    & > button {
+      margin-bottom: 0 !important;
+      color: white !important;
+      border-bottom: none !important;
+    }
+
+    & > button > h4 {
+      color: white !important;
+    }
+  }
+
+  @media screen and (min-width: 1921px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(1.2)'
+        : 'translateX(150%) scale(1.2)'};
+  }
+
+  @media screen and (min-width: 2160px) {
+    transform: ${(props) =>
+      props.isAnimated
+        ? 'translateX(0%) scale(2)'
+        : 'translateX(150%) scale(2)'};
+  }
 `;

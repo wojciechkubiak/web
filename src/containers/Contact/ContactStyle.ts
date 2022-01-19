@@ -13,12 +13,18 @@ export const Container = styled.div<IContactStyles>`
   min-height: 100vh;
   transition: 1000ms transform;
   position: absolute; // TODO: may make some weird things
-  overflow-x: hidden;
+  overflow: hidden;
   transform: ${(props) => `translateX(${props.transform}%)`};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 920px) {
+    max-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const FormContainer = styled.div<IContactStyles>`
@@ -42,6 +48,17 @@ export const FormContainer = styled.div<IContactStyles>`
   @media screen and (max-width: 1600px) {
     transform: scale(0.8);
   }
+
+  @media screen and (max-width: 1200px) {
+    transform: scale(0.7);
+    width: 40%;
+    margin-left: 4%;
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `;
 
 export const SocialContainer = styled.div`
@@ -51,6 +68,12 @@ export const SocialContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 920px) {
+    flex-direction: row;
+    bottom: 60px;
+    width: 80%;
+  }
 `;
 
 export const Socials = styled.div<IContactStyles>`
@@ -73,6 +96,18 @@ export const Socials = styled.div<IContactStyles>`
     color: ${(props) =>
       props.theme === Theme.DARK ? 'white' : '#313131'};
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 1600px) {
+    transform: scale(0.6);
+    right: 6px;
+  }
+
+  @media screen and (max-width: 920px) {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 `;
 
@@ -99,6 +134,10 @@ export const Header = styled.h1<IContactStyles>`
   border-bottom: 8px solid #adb757;
   border-right: 4px solid #adb757;
   padding: 0 20px;
+
+  @media screen and (max-width: 920px) {
+    font-size: 72px;
+  }
 `;
 
 export const Input = styled.input<IContactStyles>`
@@ -155,6 +194,10 @@ export const TextArea = styled.textarea<IContactStyles>`
   &:focus {
     box-shadow: none;
     outline: none;
+  }
+
+  @media screen and (max-width: 920px) {
+    min-width: 80%;
   }
 `;
 

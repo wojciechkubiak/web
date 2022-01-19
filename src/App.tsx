@@ -20,6 +20,8 @@ import Contact from './containers/Contact/Contact';
 import SoundContext from './context/Sound';
 import AudioPopup from './containers/AudioPopup/AudioPopup';
 import AudioFile from './assets/audio/spring_in_my_step.mp3';
+import { useWidth } from './hooks/useSize';
+import HideShowSwitch from './components/HideShowSwitch/HideShowSwitch';
 
 const App = (props: any) => {
   const { t, i18n } = props;
@@ -30,6 +32,10 @@ const App = (props: any) => {
   const [themeMode, setThemeMode] = useState<Theme>(Theme.LIGHT);
   const [isAudioWindow, setIsAudioWindow] = useState<boolean>(true);
   const [isAudio, setIsAudio] = useState<boolean>(false);
+  const [showSwitches, setShowSwitches] = useState<boolean>(false);
+
+  const width = useWidth();
+
   const audioRef = useRef(new Audio(AudioFile));
 
   const handleLanguage = (value: string) => {
@@ -112,15 +118,27 @@ const App = (props: any) => {
                 setTransform: handleTransform,
               }}
             >
-              <Layout>
-                <MainPage t={t} />
-                <Projects t={t} />
-                <Skills t={t} />
-                <Contact t={t} />
-              </Layout>
-              <ThemeSwitch />
-              <LanguageSwitch />
-              {isAudioWindow && <AudioPopup t={t} />}
+              <div className="App">
+                <Layout>
+                  <MainPage t={t} />
+                  <Projects t={t} />
+                  <Skills t={t} />
+                  <Contact t={t} />
+                </Layout>
+                {(showSwitches || width > 920) && (
+                  <>
+                    <ThemeSwitch />
+                    <LanguageSwitch />
+                  </>
+                )}
+                {width <= 920 && (
+                  <HideShowSwitch
+                    onClick={() => setShowSwitches(!showSwitches)}
+                    isOn={showSwitches}
+                  />
+                )}
+                {isAudioWindow && <AudioPopup t={t} />}
+              </div>
             </TransformContext.Provider>
           </SoundContext.Provider>
         </PageContext.Provider>

@@ -25,13 +25,19 @@ export const Container = styled.div<ISkillsStyles>`
 export const SkillsBody = styled.div<ISkillsStyles>`
   width: 80%;
   max-height: 60%;
-  overflow-y: scroll;
+  overflow-y: scroll !important;
   border-bottom: 4px solid grey;
   padding: 20px;
   background-color: ${(props) =>
     props.theme === Theme.DARK ? '#313131' : 'white'};
+
   @media screen and (max-width: 1600px) {
     transform: scale(0.8);
+    max-height: 70%;
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 100%;
   }
 `;
 
@@ -60,6 +66,16 @@ export const Header = styled.h1<ISkillsStyles>`
   border-bottom: 8px solid #adb757;
   border-right: 4px solid #adb757;
   padding: 0 20px;
+
+  @media screen and (max-width: 920px) {
+    width: 80%;
+    word-wrap: break-word;
+    font-size: 44px;
+  }
 `;
 
-export const ButtonsContainer = styled.div``;
+export const ButtonsContainer = styled.div`
+  @media screen and (max-width: 1600px) {
+    transform: scale(0.8);
+  }
+`;

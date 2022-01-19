@@ -3,7 +3,8 @@
     "back": "Back",
     "swipe": "Swipe for more",
     "continue": "Continue",
-    "continue_sound": "Continue with sound"
+    "continue_sound": "Continue with sound",
+    "popup": "* One-time popup"
   },
   "home": {
     "find_out": "Find out more"

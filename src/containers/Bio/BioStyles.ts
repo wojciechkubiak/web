@@ -47,6 +47,11 @@ export const BioContent = styled.div<IBioStyles>`
 
   @media screen and (max-width: 1600px) {
     transform: scale(0.8);
+    overflow-y: scroll !important;
+  }
+
+  @media screen and (max-width: 920px) {
+    min-width: 90%;
   }
 
   & > h1 {
@@ -73,8 +78,14 @@ export const BioContent = styled.div<IBioStyles>`
     margin-top: 32px;
   }
 
-  @media screen and (max-height: 890px) {
-    overflow-y: scroll;
+  @media screen and (max-width: 920px) {
+    & > h1 {
+      width: 240px;
+    }
+
+    & > p {
+      text-align: justify;
+    }
   }
 `;
 
@@ -82,6 +93,10 @@ export const BioButtons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media screen and (max-width: 920px) {
+    flex-direction: column;
+  }
 `;
 
 export const Strong = styled.strong<IBioStyles>`

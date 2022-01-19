@@ -14,39 +14,6 @@ import IconButton from '../../components/IconButton/IconButton';
 import ThemeContext from '../../context/Style';
 import { v4 as uuidv4 } from 'uuid';
 
-// import FlutterImg from '../../assets/images/flutter.png';
-// import ReactImg from '../../assets/images/react.png';
-// import JavascriptImg from '../../assets/images/javascript.png';
-// import TypescriptImg from '../../assets/images/typescript.png';
-// import NodejsImg from '../../assets/images/node.png';
-// import HtmlImg from '../../assets/images/html.png';
-// import CssImg from '../../assets/images/css.png';
-// import PythonImg from '../../assets/images/python.png';
-// import SqlImg from '../../assets/images/sql.png';
-
-// import WebImg from '../../assets/images/web.png';
-// import MobileImg from '../../assets/images/mobile.png';
-// import CloudImg from '../../assets/images/cloud.png';
-// import { SkillsArray, SkillsKey } from '../../types/Skills';
-
-// const skillsImages: SkillsArray = {
-//   flutter: FlutterImg,
-//   react: ReactImg,
-//   javascript: JavascriptImg,
-//   typescript: TypescriptImg,
-//   nodejs: NodejsImg,
-//   html: HtmlImg,
-//   css: CssImg,
-//   python: PythonImg,
-//   sql: SqlImg,
-// };
-
-// const orderImages = {
-//   web: WebImg,
-//   mobile: MobileImg,
-//   'backend/db': CloudImg,
-// };
-
 interface ISkills {
   t: any;
 }
