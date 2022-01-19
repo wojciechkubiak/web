@@ -68,9 +68,12 @@ export const Header = styled.h1<ISkillsStyles>`
   padding: 0 20px;
 
   @media screen and (max-width: 920px) {
+    position: relative;
     width: 80%;
+    left: 50%;
+    transform: translate(-50%);
     word-wrap: break-word;
-    font-size: 44px;
+    font-size: 58px;
   }
 `;
 

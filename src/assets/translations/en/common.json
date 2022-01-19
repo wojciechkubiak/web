@@ -145,20 +145,11 @@
     }
   ],
   "projects": [
-    {
-      "name": "AcareWeb",
-      "description":
-        "Website that allows pet shops and private users to store their loved ones data. Stack: NextJS, Prisma, PostgreSQL."
-    },
+
     {
       "name": "Energe",
       "description":
         "Website for dutch renovating company which takes clients data, counts new usage values and sends them to the company through ZOHO CRM."
-    },
-    {
-      "name": "Acare",
-      "description":
-        "My own project I'm currently working on (on hold). Application for wild animals that just cannot chill."
     },
     {
       "name": "CopySearcher",
@@ -189,6 +180,16 @@
       "name": "Opqn",
       "description":
         "Easy project that allows user to share health data with dietitians."
+    },
+    {
+      "name": "AcareWeb",
+      "description":
+        "Website that allows pet shops and private users to store their loved ones data. Stack: NextJS, Prisma, PostgreSQL."
+    },
+    {
+      "name": "Acare",
+      "description":
+        "My own project I'm currently working on (on hold). Application for wild animals that just cannot chill."
     }
   ]
 }

@@ -146,19 +146,9 @@
   ],
   "projects": [
     {
-      "name": "AcareWeb",
-      "description":
-        "Strona internetowa pozwalająca na zarządzanie zwierzakami oraz ich dobrostanem przez sklepy zoologiczne oraz osoby prywatne. Technologie: NextJS, Prisma, PostgreSQL."
-    },
-    {
       "name": "Energe",
       "description":
         "Strona internetowa dla niderladzkiej firmy renowacyjnej. Głównymi założeniami było zbieranie danych i wyliczenie nowych kosztów - na podstawie danych przechowywanych w ZOHO CRM - po przeprowadzeniu czynności."
-    },
-    {
-      "name": "Acare",
-      "description":
-        "Prywatny projekt nad którym aktualnie pracuję (wstrzymany). Aplikacja dla dzikich zwierząt, które nie potrafią się uspokoić (patrzy na swojego chomika-dzika)."
     },
     {
       "name": "CopySearcher",
@@ -189,6 +179,16 @@
       "name": "Opqn",
       "description":
         "Bardzo wczesny projekt studencki - aplikacja webowa pozwalająca na przechowywanie swoich danych, wymiarów oraz wagi."
+    },
+    {
+      "name": "AcareWeb",
+      "description":
+        "Strona internetowa pozwalająca na zarządzanie zwierzakami oraz ich dobrostanem przez sklepy zoologiczne oraz osoby prywatne. Technologie: NextJS, Prisma, PostgreSQL."
+    },
+    {
+      "name": "Acare",
+      "description":
+        "Prywatny projekt nad którym aktualnie pracuję (wstrzymany). Aplikacja dla dzikich zwierząt, które nie potrafią się uspokoić (patrzy na swojego chomika-dzika)."
     }
   ]
 }
