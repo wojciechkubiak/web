@@ -146,6 +146,11 @@
   ],
   "projects": [
     {
+      "name": "LazyNFit",
+      "description":
+        "Moja aplikacja napisana we Flutterze, pozwalająca na Tworzenie własnego planu dietetycznego, dodawanie pomiarów, ich wyświetlanie - wszystko to przy jak najmniejszej ilości kliknięć. Aktualnie czeka na sprawdzenie w Google Play."
+    },
+    {
       "name": "Energe",
       "description":
         "Strona internetowa dla niderladzkiej firmy renowacyjnej. Głównymi założeniami było zbieranie danych i wyliczenie nowych kosztów - na podstawie danych przechowywanych w ZOHO CRM - po przeprowadzeniu czynności."
@@ -190,5 +195,6 @@
       "description":
         "Prywatny projekt nad którym aktualnie pracuję (wstrzymany). Aplikacja dla dzikich zwierząt, które nie potrafią się uspokoić (patrzy na swojego chomika-dzika)."
     }
+    
   ]
 }

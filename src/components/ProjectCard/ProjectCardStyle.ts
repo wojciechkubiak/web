@@ -40,6 +40,8 @@ export const CardWebImage = styled.img<IProjectCard>`
   left: 50%;
   transform: translateX(-50%);
   z-index: 500;
+  filter: grayscale(1);
+
 `;
 
 export const ProjectWebLinks = styled.div<IProjectCard>`
@@ -82,6 +84,8 @@ export const CardMobileImage = styled.img<IProjectCard>`
   // border: 5px solid #33333d;
   position: relative;
   z-index: 500;
+  filter: grayscale(1);
+
 
   @media only screen and (max-width: 920px) {
     width: 320px;

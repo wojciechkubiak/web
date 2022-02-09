@@ -34,6 +34,7 @@ import Opqn from '../../assets/images/3w.png';
 import CopySearcher from '../../assets/images/4w.png';
 import AcareWeb from '../../assets/images/5w.png';
 import POTG from '../../assets/images/6w.png';
+import LazyNFit from '../../assets/images/4m.png';
 
 import 'swiper/css';
 import 'swiper/css/bundle';
@@ -79,6 +80,10 @@ const projectImages: ProjectsArray = {
     img: POTG,
     isMobile: false,
   },
+  LazyNFit: {
+    img: LazyNFit, 
+    isMobile: true,
+  }
 };
 
 export type Link = {

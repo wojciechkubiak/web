@@ -145,7 +145,11 @@
     }
   ],
   "projects": [
-
+    {
+      "name": "LazyNFit",
+      "description":
+        "My diet app written in Flutter. This application allows you to create your own diet plan, add measurements, display them - all with as few clicks as possible. Currently waiting to be checked on Google Play."
+    },
     {
       "name": "Energe",
       "description":
