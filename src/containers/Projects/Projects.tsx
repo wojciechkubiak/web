@@ -155,7 +155,7 @@ const Projects = ({ t }: IProjects) => {
                   header={value.name}
                   img={img}
                   description={value.description}
-                  links={[]}
+                  links={value.links}
                   isMobile={isMobile}
                 />
               </SwiperSlide>

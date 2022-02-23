@@ -133,67 +133,69 @@
   "offers": [
     {
       "name": "web",
-      "description": ["If you need a website, you've come to the right place. I am able to make a full-fledged web application based on your preferences."]
+      "description": [
+        "If you need a website, you've come to the right place. I am able to make a full-fledged web application based on your preferences."
+      ]
     },
     {
       "name": "mobile",
-      "description": ["There is mobile application on your mind? Don't hesitate and send me a message. Creating an eye-catching mobile application is not a problem for me, which is confirmed by my current professional experience."]
+      "description": [
+        "There is mobile application on your mind? Don't hesitate and send me a message. Creating an eye-catching mobile application is not a problem for me, which is confirmed by my current professional experience."
+      ]
     },
     {
       "name": "backend/db",
-      "description": ["Connecting your application to the database is a struggle? I can help you with both database model and communication with already created one. Handling data storage is pleasure with me."]
+      "description": [
+        "Connecting your application to the database is a struggle? I can help you with both database model and communication with already created one. Handling data storage is pleasure with me."
+      ]
     }
   ],
   "projects": [
     {
       "name": "LazyNFit",
-      "description":
-        "My diet app written in Flutter. This application allows you to create your own diet plan, add measurements, display them - all with as few clicks as possible. Currently waiting to be checked on Google Play."
+      "description": "My diet app written in Flutter. This application allows you to create your own diet plan, add measurements, display them - all with as few clicks as possible. Currently waiting to be checked on Google Play.",
+      "links": [
+        {
+          "type": "GooglePlay",
+          "link": "https://play.google.com/store/apps/details?id=com.woku.star_metter"
+        }
+      ]
     },
     {
       "name": "Energe",
-      "description":
-        "Website for dutch renovating company which takes clients data, counts new usage values and sends them to the company through ZOHO CRM."
+      "description": "Website for dutch renovating company which takes clients data, counts new usage values and sends them to the company through ZOHO CRM."
     },
     {
       "name": "CopySearcher",
-      "description":
-        "(Team Project) Application that allows user to check for plagiarism."
+      "description": "(Team Project) Application that allows user to check for plagiarism."
     },
     {
       "name": "POTG",
-      "description":
-        "(Team Project) Website that looks for available taxis and allows user to book them."
+      "description": "(Team Project) Website that looks for available taxis and allows user to book them."
     },
     {
       "name": "Meditate",
-      "description":
-        "(Team Project) App that supports user with multiple wellbeing exercises and statistics."
+      "description": "(Team Project) App that supports user with multiple wellbeing exercises and statistics."
     },
     {
       "name": "ObbSys",
-      "description":
-        "My engineering project for Centre of Biomedical Research. It allows user to collect data and statistics that later shows if there are any symptoms of being sick, of animal."
+      "description": "My engineering project for Centre of Biomedical Research. It allows user to collect data and statistics that later shows if there are any symptoms of being sick, of animal."
     },
     {
       "name": "FitTracker",
-      "description":
-        "Study project that allows user to share health data with dietitians."
+      "description": "Study project that allows user to share health data with dietitians."
     },
     {
       "name": "Opqn",
-      "description":
-        "Easy project that allows user to share health data with dietitians."
+      "description": "Easy project that allows user to share health data with dietitians."
     },
     {
       "name": "AcareWeb",
-      "description":
-        "Website that allows pet shops and private users to store their loved ones data. Stack: NextJS, Prisma, PostgreSQL."
+      "description": "Website that allows pet shops and private users to store their loved ones data. Stack: NextJS, Prisma, PostgreSQL."
     },
     {
       "name": "Acare",
-      "description":
-        "My own project I'm currently working on (on hold). Application for wild animals that just cannot chill."
+      "description": "My own project I'm currently working on (on hold). Application for wild animals that just cannot chill."
     }
   ]
 }

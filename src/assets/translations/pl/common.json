@@ -127,74 +127,79 @@
     },
     {
       "name": "sql",
-      "description": ["Składnia MySQL / PostgreSQL", "Łączenie tabel", "T-SQL"]
+      "description": [
+        "Składnia MySQL / PostgreSQL",
+        "Łączenie tabel",
+        "T-SQL"
+      ]
     }
   ],
   "offers": [
     {
       "name": "web",
-      "description": ["Jeśli potrzebujesz strony internetowej, jesteś w dobrym miejscu. Jestem w stanie stworzyć funkcjonalne aplikacje webowe oparte na Twoich preferencjach."]
+      "description": [
+        "Jeśli potrzebujesz strony internetowej, jesteś w dobrym miejscu. Jestem w stanie stworzyć funkcjonalne aplikacje webowe oparte na Twoich preferencjach."
+      ]
     },
     {
       "name": "mobile",
-      "description": ["Idea aplikacji mobilnej nie daje ci spać? Nie zwlekaj i wyślij mi wiadomość. Tworzenie przyciągających wzrok aplikacji mobilnych nie stanowi dla mnie problemu."]
+      "description": [
+        "Idea aplikacji mobilnej nie daje ci spać? Nie zwlekaj i wyślij mi wiadomość. Tworzenie przyciągających wzrok aplikacji mobilnych nie stanowi dla mnie problemu."
+      ]
     },
     {
       "name": "backend/db",
-      "description": ["Połączenie aplikacji z bazą jest katorgą? Mogę ci w tym pomóc - zarówno jeśli mowa o modelu bazy danych, jak również z samą komunikacją z uprzednio stworzoną bazą danych. Ze mną przechowywanie danych jest przyjemnością."]
+      "description": [
+        "Połączenie aplikacji z bazą jest katorgą? Mogę ci w tym pomóc - zarówno jeśli mowa o modelu bazy danych, jak również z samą komunikacją z uprzednio stworzoną bazą danych. Ze mną przechowywanie danych jest przyjemnością."
+      ]
     }
   ],
   "projects": [
     {
       "name": "LazyNFit",
-      "description":
-        "Moja aplikacja napisana we Flutterze, pozwalająca na Tworzenie własnego planu dietetycznego, dodawanie pomiarów, ich wyświetlanie - wszystko to przy jak najmniejszej ilości kliknięć. Aktualnie czeka na sprawdzenie w Google Play."
+      "description": "Moja aplikacja napisana we Flutterze, pozwalająca na Tworzenie własnego planu dietetycznego, dodawanie pomiarów, ich wyświetlanie - wszystko to przy jak najmniejszej ilości kliknięć. Aktualnie czeka na sprawdzenie w Google Play.",
+      "links": [
+        {
+          "type": "GooglePlay",
+          "link": "https://play.google.com/store/apps/details?id=com.woku.star_metter"
+        }
+      ]
     },
     {
       "name": "Energe",
-      "description":
-        "Strona internetowa dla niderladzkiej firmy renowacyjnej. Głównymi założeniami było zbieranie danych i wyliczenie nowych kosztów - na podstawie danych przechowywanych w ZOHO CRM - po przeprowadzeniu czynności."
+      "description": "Strona internetowa dla niderladzkiej firmy renowacyjnej. Głównymi założeniami było zbieranie danych i wyliczenie nowych kosztów - na podstawie danych przechowywanych w ZOHO CRM - po przeprowadzeniu czynności."
     },
     {
       "name": "CopySearcher",
-      "description":
-        "(Projekt zespołowy) Aplikacja pozwalająca na sprawdzenie czy istnieje plagiat dla danego obrazu, artykułu lub wideo pod wybranymi przez nas adresami popularnych portali."
+      "description": "(Projekt zespołowy) Aplikacja pozwalająca na sprawdzenie czy istnieje plagiat dla danego obrazu, artykułu lub wideo pod wybranymi przez nas adresami popularnych portali."
     },
     {
       "name": "POTG",
-      "description":
-        "(Projekt zespołowy) Strona internetowa scrappująca informacje odnośnie możliwych przejazdów pozwalająca na rezerwację danej trasy - zwracając klientowi voucher."
+      "description": "(Projekt zespołowy) Strona internetowa scrappująca informacje odnośnie możliwych przejazdów pozwalająca na rezerwację danej trasy - zwracając klientowi voucher."
     },
     {
       "name": "Meditate",
-      "description":
-        "(Projekt Zespołowy) Aplikacja mobilna (wstrzymana - czekamy na zawartość od klienta) zawierająca w sobie różnego rodzaju ćwiczenia, w tym medytacje, afirmacje itd. Przechowuje ona również statystyki, które można potem wyświetlić na interaktywych wykresach."
+      "description": "(Projekt Zespołowy) Aplikacja mobilna (wstrzymana - czekamy na zawartość od klienta) zawierająca w sobie różnego rodzaju ćwiczenia, w tym medytacje, afirmacje itd. Przechowuje ona również statystyki, które można potem wyświetlić na interaktywych wykresach."
     },
     {
       "name": "ObbSys",
-      "description":
-        "Mój projekt inżynieryjny dla Centrum Badań Biomedycznych. Jego celem jest kolekcjonowanie oraz zarządzanie danymi, jak również wyświetlanie statystyk informując przy tym czy spożywany przez zwierzę pokarm oraz woda są w normie - czy zwierzę jest chore."
+      "description": "Mój projekt inżynieryjny dla Centrum Badań Biomedycznych. Jego celem jest kolekcjonowanie oraz zarządzanie danymi, jak również wyświetlanie statystyk informując przy tym czy spożywany przez zwierzę pokarm oraz woda są w normie - czy zwierzę jest chore."
     },
     {
       "name": "FitTracker",
-      "description":
-        "Wczesny projekt studencki pozwalający na dzielenie się danymi z dietetykiem oraz zarządzeniem przez dietetyka zamkniętą grupą podopiecznych."
+      "description": "Wczesny projekt studencki pozwalający na dzielenie się danymi z dietetykiem oraz zarządzeniem przez dietetyka zamkniętą grupą podopiecznych."
     },
     {
       "name": "Opqn",
-      "description":
-        "Bardzo wczesny projekt studencki - aplikacja webowa pozwalająca na przechowywanie swoich danych, wymiarów oraz wagi."
+      "description": "Bardzo wczesny projekt studencki - aplikacja webowa pozwalająca na przechowywanie swoich danych, wymiarów oraz wagi."
     },
     {
       "name": "AcareWeb",
-      "description":
-        "Strona internetowa pozwalająca na zarządzanie zwierzakami oraz ich dobrostanem przez sklepy zoologiczne oraz osoby prywatne. Technologie: NextJS, Prisma, PostgreSQL."
+      "description": "Strona internetowa pozwalająca na zarządzanie zwierzakami oraz ich dobrostanem przez sklepy zoologiczne oraz osoby prywatne. Technologie: NextJS, Prisma, PostgreSQL."
     },
     {
       "name": "Acare",
-      "description":
-        "Prywatny projekt nad którym aktualnie pracuję (wstrzymany). Aplikacja dla dzikich zwierząt, które nie potrafią się uspokoić (patrzy na swojego chomika-dzika)."
+      "description": "Prywatny projekt nad którym aktualnie pracuję (wstrzymany). Aplikacja dla dzikich zwierząt, które nie potrafią się uspokoić (patrzy na swojego chomika-dzika)."
     }
-    
   ]
 }

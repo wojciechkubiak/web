@@ -1,7 +1,7 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { IconBaseProps } from 'react-icons';
 import { v4 as uuidv4 } from 'uuid';
-
+import { LinkKey } from '../../types/Projects';
 import ThemeContext from '../../context/Style';
 import {
   ProjectsMobileCardContainer,
@@ -10,11 +10,14 @@ import {
   CardWebImage,
   Info,
 } from './ProjectCardStyle';
+import Badge from '../Badge/Badge';
 
-export type Link = {
-  img: (props: IconBaseProps) => JSX.Element;
-  url: string;
-};
+
+
+export interface Link {
+  type: LinkKey,
+  link: string,
+}
 
 export interface IProjectCard {
   header: string;
@@ -33,6 +36,10 @@ const ProjectCard = ({
 }: IProjectCard) => {
   const themeCtx = useContext(ThemeContext);
 
+  useEffect(() => {
+    console.log(links);
+  }, [links]);
+
   return isMobile ? (
     <>
       <ProjectsMobileCardContainer theme={themeCtx.themeMode}>
@@ -44,13 +51,7 @@ const ProjectCard = ({
         <Info isMobile={true} theme={themeCtx.themeMode}>
           <h1>{header}</h1>
           <p>{description}</p>
-          {links?.map((element: Link) => {
-            return (
-              <a key={uuidv4()} href={element.url}>
-                <element.img size={42} color="white" />
-              </a>
-            );
-          })}
+          {links?.map((link: Link) => <Badge key={uuidv4()} link={link}/> )}
         </Info>
       </ProjectsMobileCardContainer>
     </>
@@ -64,13 +65,7 @@ const ProjectCard = ({
       <Info isMobile={false} theme={themeCtx.themeMode}>
         <h1>{header}</h1>
         <p>{description}</p>
-        {links?.map((element: Link) => {
-          return (
-            <a key={uuidv4()} href={element.url}>
-              <element.img size={42} color="white" />
-            </a>
-          );
-        })}
+        {links?.map((link: Link) => <Badge key={uuidv4()} link={link}/> )}
       </Info>
     </ProjectsWebCardContainer>
   );

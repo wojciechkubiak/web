@@ -109,7 +109,7 @@ export const Info = styled.div<IProjectCard>`
   border: 4px solid grey;
   transform: ${(props) =>
     props.isMobile ? 'translate(-4px, 10px)' : 'translateY(-7px)'};
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
