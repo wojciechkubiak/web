@@ -4,15 +4,13 @@ import TransformContext from '../../context/Transform';
 import PageContext from '../../context/Page';
 import ThemeContext from '../../context/Style';
 import SoundContext from '../../context/Sound';
-
 import { Page } from '../../types/Pages';
 import { Theme } from '../../types/Themes';
-
 import {
   Background,
   ColorBackground,
   Container,
-  Global,
+  GlobalProxy,
 } from './LayoutStyle';
 
 interface ISplitBackground {
@@ -25,8 +23,12 @@ const SplitBackground = ({ children }: ISplitBackground) => {
   const themeCtx = useContext(ThemeContext);
   const soundCtx = useContext(SoundContext);
 
-  const [isAnimatedLeft, setIsAnimatedLeft] = useState(false);
-  const [isAnimatedRight, setIsAnimatedRight] = useState(false);
+  const [isAnimatedLeft, setIsAnimatedLeft] =
+    useState<boolean>(false);
+  const [isAnimatedRight, setIsAnimatedRight] =
+    useState<boolean>(false);
+
+  const isDarkMode = themeCtx.themeMode === Theme.DARK;
 
   useEffect(() => {
     const mode = localStorage.getItem('mode');
@@ -75,17 +77,15 @@ const SplitBackground = ({ children }: ISplitBackground) => {
 
   return (
     <Container transform={transformCtx.transform}>
-      <Global theme={themeCtx.themeMode} />
+      <GlobalProxy theme={themeCtx.themeMode} />
       <Background
-        isDarkMode={themeCtx.themeMode === Theme.DARK}
+        isDarkMode={isDarkMode}
         isLeft={true}
         isAnimated={isAnimatedLeft}
       />
-      <ColorBackground
-        isDarkMode={themeCtx.themeMode === Theme.DARK}
-      />
+      <ColorBackground isDarkMode={isDarkMode} />
       <Background
-        isDarkMode={themeCtx.themeMode === Theme.DARK}
+        isDarkMode={isDarkMode}
         isLeft={false}
         isAnimated={isAnimatedRight}
       />

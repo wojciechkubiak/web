@@ -1,11 +1,9 @@
 import { useContext, useState } from 'react';
 
 import { Theme } from '../../types/Themes';
-
 import ThemeContext from '../../context/Style';
 import PageContext from '../../context/Page';
 import SoundContext from '../../context/Sound';
-
 import {
   LanguageOption,
   LanguageSwitchContainer,
@@ -19,13 +17,19 @@ const LanguageSwitch = () => {
 
   const [showOptions, setShowOptions] = useState<boolean>(false);
 
+  const LOTTIE_SIZE = 45;
+
   return (
     <LanguageSwitchContainer
       page={pageCtx.currentPage}
       isActive={themeCtx.themeMode === Theme.DARK}
     >
       {!soundCtx.isAudioWindow && (
-        <AudioLottie width={45} height={45} isInteractive={true} />
+        <AudioLottie
+          width={LOTTIE_SIZE}
+          height={LOTTIE_SIZE}
+          isInteractive={true}
+        />
       )}
       <LanguageOption
         theme={themeCtx.themeMode}

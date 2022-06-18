@@ -4,7 +4,6 @@ import { useWidth } from '../../hooks/useSize';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { v4 as uuidv4 } from 'uuid';
-
 import {
   MdKeyboardArrowLeft,
   MdKeyboardArrowRight,
@@ -12,7 +11,6 @@ import {
 
 import PageContext from '../../context/Page';
 import ThemeContext from '../../context/Style';
-
 import {
   ButtonsContainer,
   Container,
@@ -81,9 +79,9 @@ const projectImages: ProjectsArray = {
     isMobile: false,
   },
   LazyNFit: {
-    img: LazyNFit, 
+    img: LazyNFit,
     isMobile: true,
-  }
+  },
 };
 
 export type Link = {

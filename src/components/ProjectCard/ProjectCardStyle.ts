@@ -41,7 +41,6 @@ export const CardWebImage = styled.img<IProjectCard>`
   transform: translateX(-50%);
   z-index: 500;
   filter: grayscale(1);
-
 `;
 
 export const ProjectWebLinks = styled.div<IProjectCard>`
@@ -86,7 +85,6 @@ export const CardMobileImage = styled.img<IProjectCard>`
   z-index: 500;
   filter: grayscale(1);
 
-
   @media only screen and (max-width: 920px) {
     width: 320px;
     height: 640px;
@@ -101,9 +99,9 @@ export const ProjectMobileLinks = styled.div<IProjectCard>`
 `;
 
 export const Info = styled.div<IProjectCard>`
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 24px 50px -10px,
-    rgba(0, 0, 0, 0.3) 0px 10px 20px -10px;
+  box-shadow: ${(props) =>
+    props.theme !== Theme.DARK &&
+    'rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 20px 10px -10px, rgba(0, 0, 0, 0.3) 0px 10px 20px -10px'};
   min-width: 320px;
   height: ${(props) => (props.isMobile ? '320px' : 'auto')};
   border: 4px solid grey;

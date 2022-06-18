@@ -1,21 +1,20 @@
 import { ReactNode, useContext } from 'react';
 
 import ThemeContext from '../../context/Style';
-
 import { ButtonText, IconButtonS } from './IconButtonStyle';
 
 interface IIconButton {
   children: ReactNode;
   onClick: () => void;
-  isReversed?: boolean;
   text: String;
+  isReversed?: boolean;
 }
 
 const IconButton = ({
   children,
   onClick,
-  isReversed = false,
   text,
+  isReversed = false,
 }: IIconButton) => {
   const themeCtx = useContext(ThemeContext);
 

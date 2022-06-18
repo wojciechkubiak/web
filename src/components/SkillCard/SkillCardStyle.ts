@@ -10,9 +10,9 @@ export const Card = styled.div<ICard>`
   width: 450px;
   min-height: 240px;
   background-color: white;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 20px 10px -10px,
-    rgba(0, 0, 0, 0.3) 0px 10px 20px -10px;
+  box-shadow: ${(props) =>
+    props.theme !== Theme.DARK &&
+    'rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 20px 10px -10px, rgba(0, 0, 0, 0.3) 0px 10px 20px -10px'};
   margin: 32px 0;
   display: flex;
   flex-direction: row;

@@ -40,6 +40,8 @@ export const Global = createGlobalStyle<ILayoutStyle>`
   }
 `;
 
+export const GlobalProxy: any = Global;
+
 export const Container = styled.div<ILayoutStyle>`
   position: relative;
   z-index: 1000;

@@ -1,9 +1,7 @@
 import { useContext } from 'react';
-
 import { GiSettingsKnobs } from 'react-icons/gi';
 
 import ThemeContext from '../../context/Style';
-
 import { Theme } from '../../types/Themes';
 import { Container } from './HideShowSwitchStyle';
 
@@ -12,7 +10,7 @@ interface IHideShowSwitch {
   onClick: () => void;
 }
 
-const HideShowSwitch = ({ isOn, onClick }: IHideShowSwitch) => {
+const HideShowSwitch = ({ onClick }: IHideShowSwitch) => {
   const themeCtx = useContext(ThemeContext);
 
   return (

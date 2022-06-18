@@ -21,6 +21,8 @@ const AudioPopup = ({ t }: IAudioPopup) => {
   const soundCtx = useContext(SoundContext);
   const themeCtx = useContext(ThemeContext);
 
+  const ICON_SIZE = 64;
+
   return (
     <AudioContainer theme={themeCtx.themeMode}>
       <AudioAnimation>
@@ -37,7 +39,7 @@ const AudioPopup = ({ t }: IAudioPopup) => {
           text={t('global.continue', { framework: 'react-i18next' })}
           isReversed={true}
         >
-          <BsArrowRight size={64} />
+          <BsArrowRight size={ICON_SIZE} />
         </IconButton>
         <IconButton
           onClick={() => {
@@ -50,7 +52,7 @@ const AudioPopup = ({ t }: IAudioPopup) => {
           })}
           isReversed={true}
         >
-          <BsArrowRight size={64} />
+          <BsArrowRight size={ICON_SIZE} />
         </IconButton>
       </Icons>
       <Subinfo>

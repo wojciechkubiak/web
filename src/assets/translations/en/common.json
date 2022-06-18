@@ -44,7 +44,7 @@
     "part9": ". From that first weeks - even days - all I'm doing is thinking about what fancy application I could do, that would be nice looking and functional. Currently ",
     "bold9": "I accept various types of orders",
     "part10": ", I am working full time job as a programmer - ",
-    "bold10": "Mobile / Frontend Developer",
+    "bold10": "Flutter / Frontend Developer",
     "part11": ", which allows me to earn a living while doing something I feel strong with, what makes my eyes shine. If you want to hire me or give me an assignment, so I can share my passion with you, ",
     "bold11": "fill in the form",
     "part12": " at the end of the website or just go into one of my social medias and ",
@@ -52,16 +52,6 @@
     "part13": "."
   },
   "skills": [
-    {
-      "name": "flutter",
-      "description": [
-        "Objective programming",
-        "Making of views and app logic",
-        "BLoC architecture",
-        "Implementation and modification of existing packages",
-        "Animations"
-      ]
-    },
     {
       "name": "react",
       "description": [
@@ -103,6 +93,16 @@
       ]
     },
     {
+      "name": "flutter",
+      "description": [
+        "Objective programming",
+        "Making of views and app logic",
+        "BLoC architecture",
+        "Implementation and modification of existing packages",
+        "Animations"
+      ]
+    },
+    {
       "name": "html",
       "description": ["Semi-advanced syntax"]
     },
@@ -113,7 +113,8 @@
         "Flexbox",
         "SASS",
         "Animations",
-        "Responsive web design"
+        "Responsive web design",
+        "Tailwind CSS"
       ]
     },
     {
@@ -128,6 +129,10 @@
     {
       "name": "sql",
       "description": ["MySQL / PostgreSQL syntax", "Joins", "T-SQL"]
+    },
+    {
+      "name": "docker",
+      "description": ["Basic setup"]
     }
   ],
   "offers": [

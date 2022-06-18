@@ -29,6 +29,8 @@ const Skills = ({ t }: ISkills) => {
   const [order, setOrder] = useState<Array<any>>([]);
   const [hire, setHire] = useState<Array<any>>([]);
 
+  const ICON_SIZE = 64;
+
   useEffect(() => {
     setOrder(
       t('skills', {
@@ -92,14 +94,14 @@ const Skills = ({ t }: ISkills) => {
           onClick={() => pageCtx.setCurrentPage(Page.PROJECTS)}
           text={t('global.back', { framework: 'react-i18next' })}
         >
-          <BsArrowLeft size={64} />
+          <BsArrowLeft size={ICON_SIZE} />
         </IconButton>
         <IconButton
           onClick={() => pageCtx.setCurrentPage(Page.CONTACT)}
           text={t('pages.contact', { framework: 'react-i18next' })}
           isReversed={true}
         >
-          <BsArrowRight size={64} />
+          <BsArrowRight size={ICON_SIZE} />
         </IconButton>
       </ButtonsContainer>
     </Container>

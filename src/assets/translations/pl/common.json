@@ -44,7 +44,7 @@
     "part9": ". Od pierwszych tygodni - a nawet dni - nie mogłem przestać zastanawiać się jaką wymyślną aplikację mógłbym stworzyć. Funkcjonalną oraz - oczywiście - ładnie wyglądającą. Aktualnie ",
     "bold9": "akceptuję oferty różnego typu",
     "part10": ", pracuję również na pełny etat jako programista - ",
-    "bold10": "Mobile / Frontend Developer",
+    "bold10": "Flutter / Frontend Developer",
     "part11": ", co pozwala mi nie tylko przeżyć, ale również zajmować się w życiu czymś, w czym czuję się mocny, co sprawia, że błyszczą mi się oczy na samą myśl o kolejnym dniu spędzonym przy projekcie. Jeśli chcesz mnie zatrudnić lub zlecić urealnienie Twego pomysłu - co pozwoli mi na podzielenie się z Tobą swoją pasją - ",
     "bold11": "wypełnij formularz",
     "part12": " na końcu strony lub wejdź w moje social media i ",
@@ -52,16 +52,6 @@
     "part13": "."
   },
   "skills": [
-    {
-      "name": "flutter",
-      "description": [
-        "Programowanie obiektowe",
-        "Tworzenie widoków i logiki",
-        "Architektura BLoC",
-        "Implementacja i modyfikacja paczek",
-        "Animacje"
-      ]
-    },
     {
       "name": "react",
       "description": [
@@ -103,6 +93,16 @@
       ]
     },
     {
+      "name": "flutter",
+      "description": [
+        "Programowanie obiektowe",
+        "Tworzenie widoków i logiki",
+        "Architektura BLoC",
+        "Implementacja i modyfikacja paczek",
+        "Animacje"
+      ]
+    },
+    {
       "name": "html",
       "description": ["Średni-zaawansowana składnia"]
     },
@@ -113,7 +113,8 @@
         "Flexbox",
         "SASS",
         "Animacje",
-        "Responsywny design"
+        "Responsywny design",
+        "Tailwind CSS"
       ]
     },
     {
@@ -132,6 +133,10 @@
         "Łączenie tabel",
         "T-SQL"
       ]
+    },
+    {
+      "name": "docker",
+      "description": ["Podstawowa konfiguracja"]
     }
   ],
   "offers": [

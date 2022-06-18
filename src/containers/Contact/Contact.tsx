@@ -74,7 +74,6 @@ const Contact = ({ t }: IContact) => {
         .then((resp) => {
           setDisabled(false);
           setMessage(defaultMessage);
-          console.log(resp.status);
         })
         .catch((e) => {
           setDisabled(false);
@@ -82,7 +81,6 @@ const Contact = ({ t }: IContact) => {
           console.error(e);
         });
     }
-    console.log(message);
   };
 
   const onChange = (

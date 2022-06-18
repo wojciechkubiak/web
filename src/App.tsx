@@ -71,19 +71,12 @@ const App = (props: any) => {
   }, []);
 
   useEffect(() => {
-    console.log('isaudio', isAudio);
     if (isAudio) {
       audioRef.current.loop = true;
       if (audioRef.current !== undefined) {
-        console.log('yo');
-        audioRef.current
-          .play()
-          .then(function () {
-            console.log('playing');
-          })
-          .catch(function (error: any) {
-            console.error(error);
-          });
+        audioRef.current.play().catch(function (error: any) {
+          console.error(error);
+        });
       }
     } else {
       audioRef.current.pause();
