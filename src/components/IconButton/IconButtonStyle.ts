@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface IIconButton {
   isReversed?: boolean;
@@ -31,7 +32,7 @@ export const IconButtonS = styled.button<IIconButton>`
       ${(props) => (props.theme === Theme.DARK ? 'white' : '#313131')};
   }
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(0.8);
   }
 `;

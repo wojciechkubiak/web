@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import ThemeContext from '../../context/Style';
+import { firstLetterToUpperCase } from '../../func/parsers';
 
 import { Card, CardBody } from './SkillCardStyle';
 
@@ -12,9 +13,6 @@ interface ISkillCard {
 
 const SkillCard = ({ text, description }: ISkillCard) => {
   const themeCtx = useContext(ThemeContext);
-
-  const firstLetterToUpperCase = (text: string) =>
-    text.charAt(0).toUpperCase() + text.slice(1);
 
   return (
     <Card theme={themeCtx.themeMode}>

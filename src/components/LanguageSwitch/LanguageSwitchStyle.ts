@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
 import { Page } from '../../types/Pages';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface ILanguageSwitch {
   isActive?: boolean;
@@ -33,13 +34,13 @@ export const LanguageSwitchContainer = styled.div<ILanguageSwitch>`
     rgba(50, 50, 93, 0.7) 0 20px 50px -10px,
     rgba(0, 0, 0, 0.9) 0px 10px 20px -15px;
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     left: 8px;
     bottom: 8px;
     transform: scale(0.8);
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     left: 48px;
     top: 112px;
     transform: scale(0.8);

@@ -94,7 +94,7 @@ export interface IProjectCard {
   img: string;
   description: string;
   isMobile: boolean;
-  links: Link[] | undefined;
+  links?: Link[];
 }
 
 const Projects = ({ t }: IProjects) => {

@@ -68,7 +68,7 @@ const Skills = ({ t }: ISkills) => {
           {t('skills_headers.order', { framework: 'react-i18next' })}
         </Header>
         <SkillsContainer theme={themeCtx.themeMode}>
-          {hire.map((element) => (
+          {hire?.map((element) => (
             <SkillCard
               key={uuidv4()}
               text={element.name}
@@ -80,7 +80,7 @@ const Skills = ({ t }: ISkills) => {
           {t('skills_headers.hire', { framework: 'react-i18next' })}
         </Header>
         <SkillsContainer theme={themeCtx.themeMode}>
-          {order.map((element) => (
+          {order?.map((element) => (
             <SkillCard
               key={uuidv4()}
               text={element.name}

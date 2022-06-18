@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface IProjectCard {
   theme?: Theme;
@@ -13,11 +14,11 @@ export const ProjectsWebCardContainer = styled.div<IProjectCard>`
   width: 600px;
   margin: 0 auto;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: ${RESOLUTION.LG}px) {
     padding: 20px;
   }
 
-  @media only screen and (max-width: 920px) {
+  @media only screen and (max-width: ${RESOLUTION.SM}px) {
     padding: 20px 0 40px;
     display: flex;
     justify-content: space-between;
@@ -35,7 +36,6 @@ export const CardWebImage = styled.img<IProjectCard>`
   background-color: ${(props) =>
     props.theme === Theme.DARK ? 'white' : '#313131'};
   padding: 5px;
-  // border: 5px solid #33333d;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -57,11 +57,11 @@ export const ProjectsMobileCardContainer = styled.div<IProjectCard>`
   display: flex;
   flex-direction: row;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: ${RESOLUTION.LG}px) {
     padding: 20px;
   }
 
-  @media only screen and (max-width: 920px) {
+  @media only screen and (max-width: ${RESOLUTION.SM}px) {
     padding: 20px 0 40px;
     display: flex;
     justify-content: space-between;
@@ -80,12 +80,11 @@ export const CardMobileImage = styled.img<IProjectCard>`
   background-color: ${(props) =>
     props.theme === Theme.DARK ? 'white' : '#313131'};
   padding: 5px;
-  // border: 5px solid #33333d;
   position: relative;
   z-index: 500;
   filter: grayscale(1);
 
-  @media only screen and (max-width: 920px) {
+  @media only screen and (max-width: ${RESOLUTION.SM}px) {
     width: 320px;
     height: 640px;
   }
@@ -133,12 +132,12 @@ export const Info = styled.div<IProjectCard>`
     line-height: 24px;
     font-size: 20px;
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: ${RESOLUTION.HD}px) {
       font-size: 22px;
     }
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     box-shadow: none;
     transform: translate(0, -4px);
     width: ${(props) => (props.isMobile ? '80%' : 'auto')};

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { Page } from '../../types/Pages';
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface IBioStyles {
   isAnimated?: boolean;
@@ -46,12 +47,12 @@ export const BioContent = styled.div<IBioStyles>`
     props.theme !== Theme.DARK &&
     'rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 20px 10px -10px, rgba(0, 0, 0, 0.3) 0px 10px 20px -10px'};
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(0.8);
     overflow-y: scroll !important;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     min-width: 90%;
   }
 
@@ -79,7 +80,7 @@ export const BioContent = styled.div<IBioStyles>`
     margin-top: 32px;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     & > h1 {
       width: 240px;
     }
@@ -95,7 +96,7 @@ export const BioButtons = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     flex-direction: column;
   }
 `;

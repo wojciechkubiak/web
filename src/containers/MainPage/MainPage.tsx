@@ -31,7 +31,6 @@ const MainPage = ({ t }: IMainPage) => {
   const [isSubheaderAnimated, setIsSubheaderAnimated] =
     useState(false);
   const [isButtonAnimated, setIsButtonAnimated] = useState(false);
-  const [isReversed, setIsReversed] = useState(false);
 
   useEffect(() => {
     if (!soundCtx.isAudioWindow) {
@@ -64,13 +63,9 @@ const MainPage = ({ t }: IMainPage) => {
         </Headers>
         <ButtonContainer isAnimated={isButtonAnimated}>
           <IconButton
-            onClick={() => {
-              pageCtx.setCurrentPage(Page.ABOUT);
-              setIsReversed(true);
-              // transformCtx.setTransform(50);
-            }}
+            onClick={() => pageCtx.setCurrentPage(Page.ABOUT)}
             text={t('home.find_out', { framework: 'react-i18next' })}
-            isReversed={true}
+            isReversed
           >
             <BsArrowRight size={64} />
           </IconButton>

@@ -67,6 +67,7 @@ const App = (props: any) => {
 
   useEffect(() => {
     const isInit: boolean = localStorage.getItem('isInit') === null;
+
     if (!isInit) handleAudioWindow(false);
   }, []);
 

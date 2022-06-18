@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface IProjectsStyles {
   transform?: number;
@@ -21,7 +22,7 @@ export const Container = styled.div<IProjectsStyles>`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     justify-content: center;
     transform: ${(props) =>
       `translateX(${props.transform}%) scale(0.7)`};
@@ -29,11 +30,11 @@ export const Container = styled.div<IProjectsStyles>`
     height: auto;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     width: 70%;
   }
 
-  @media screen and (max-width: 920px) and (max-height: 700px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) and (max-height: 700px) {
     transform: ${(props) =>
       `translateX(${props.transform}%) scale(0.6)`};
   }
@@ -53,7 +54,7 @@ export const Header = styled.h1<IProjectsStyles>`
   border-right: 4px solid #adb757;
   padding: 0 20px;
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(0.8);
   }
 `;
@@ -62,7 +63,7 @@ export const SwiperContainer = styled.div`
   width: 100%;
 `;
 export const ButtonsContainer = styled.div`
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(1);
   }
 `;
@@ -88,7 +89,7 @@ export const ButtonNav = styled.button<IProjectsStyles>`
       props.theme === Theme.DARK ? 'white' : '#313131'};
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     top: 81%;
   }
 `;

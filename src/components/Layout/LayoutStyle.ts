@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import BackgroundLeft from '../../assets/images/bgleftfhd.webp';
 import BackgroundRight from '../../assets/images/bgrightfhd.webp';
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface ILayoutStyle {
   isLeft?: boolean;
@@ -79,11 +80,11 @@ export const Background = styled.div<ILayoutStyle>`
   transition: 1500ms;
   filter: ${(props) => (props.isDarkMode ? 'grayscale(1)' : 'none')};
 
-  @media screen and (max-width: 1510px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     background-size: cover;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     min-width: 100vw;
     width: 100%;
   }

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
 import { Page } from '../../types/Pages';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface IMainPageStyle {
   isAnimated?: boolean;
@@ -35,7 +36,7 @@ export const MainPage = styled.div<IMainPageStyle>`
   transform: ${(props) =>
     props.isActive ? 'translateX(0%)' : 'translateX(-150%)'};
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     height: 90%;
     min-height: 90vh;
   }
@@ -47,7 +48,7 @@ export const Headers = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     min-height: 200px;
     align-items: center;
   }
@@ -78,21 +79,21 @@ export const Header = styled.h1<IMainPageStyle>`
   transform: ${(props) =>
     props.isAnimated ? 'translateX(0%)' : 'translateX(150%)'};
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(0.8)'
         : 'translateX(150%) scale(0.8)'};
   }
 
-  @media screen and (max-width: 1420px) {
+  @media screen and (max-width: ${RESOLUTION.LG}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(0.6)'
         : 'translateX(150%) scale(0.6)'};
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: ${RESOLUTION.MD}px) {
     left: 120px;
     font-size: 6rem;
     transform: ${(props) =>
@@ -101,7 +102,7 @@ export const Header = styled.h1<IMainPageStyle>`
         : 'translateX(250%) scale(0.9)'};
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     left: 0;
     font-size: 6rem;
     text-align: center;
@@ -111,14 +112,14 @@ export const Header = styled.h1<IMainPageStyle>`
         : 'translateX(250%) scale(0.7)'};
   }
 
-  @media screen and (min-width: 1921px) {
+  @media screen and (min-width: ${RESOLUTION.FHD}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(1.2)'
         : 'translateX(150%) scale(1.2)'};
   }
 
-  @media screen and (min-width: 2160px) {
+  @media screen and (min-width: ${RESOLUTION.ULTRA}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(2)'
@@ -148,7 +149,7 @@ export const Subheader = styled.h1<IMainPageStyle>`
   transform: ${(props) =>
     props.isAnimated ? 'translateX(0%)' : 'translateX(150%)'};
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     left: 380px;
     transform: ${(props) =>
       props.isAnimated
@@ -156,7 +157,7 @@ export const Subheader = styled.h1<IMainPageStyle>`
         : 'translateX(150%) scale(0.8)'};
   }
 
-  @media screen and (max-width: 1420px) {
+  @media screen and (max-width: ${RESOLUTION.LG}px) {
     left: 320px;
     transform: ${(props) =>
       props.isAnimated
@@ -164,7 +165,7 @@ export const Subheader = styled.h1<IMainPageStyle>`
         : 'translateX(150%) scale(0.6)'};
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: ${RESOLUTION.MD}px) {
     left: 240px;
     transform: ${(props) =>
       props.isAnimated
@@ -172,7 +173,7 @@ export const Subheader = styled.h1<IMainPageStyle>`
         : 'translateX(250%) scale(0.7)'};
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     width: 70%;
     left: 0;
     text-align: center;
@@ -182,14 +183,14 @@ export const Subheader = styled.h1<IMainPageStyle>`
         : 'translateX(250%) scale(0.6)'};
   }
 
-  @media screen and (min-width: 1921px) {
+  @media screen and (min-width: ${RESOLUTION.FHD}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(1.2)'
         : 'translateX(150%) scale(1.2)'};
   }
 
-  @media screen and (min-width: 2160px) {
+  @media screen and (min-width: ${RESOLUTION.ULTRA}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(2)'
@@ -204,21 +205,21 @@ export const ButtonContainer = styled.div<IMainPageStyle>`
   transform: ${(props) =>
     props.isAnimated ? 'translateX(0%)' : 'translateX(250%)'};
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(0.8)'
         : 'translateX(250%) scale(0.8)'};
   }
 
-  @media screen and (max-width: 1420px) {
+  @media screen and (max-width: ${RESOLUTION.LG}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(0.7)'
         : 'translateX(250%) scale(0.7)'};
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: ${RESOLUTION.MD}px) {
     left: 300px;
     transform: ${(props) =>
       props.isAnimated
@@ -226,7 +227,7 @@ export const ButtonContainer = styled.div<IMainPageStyle>`
         : 'translateX(250%) scale(1)'};
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     width: 90%;
     left: 0;
     text-align: center;
@@ -247,14 +248,14 @@ export const ButtonContainer = styled.div<IMainPageStyle>`
     }
   }
 
-  @media screen and (min-width: 1921px) {
+  @media screen and (min-width: ${RESOLUTION.FHD}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(1.2)'
         : 'translateX(150%) scale(1.2)'};
   }
 
-  @media screen and (min-width: 2160px) {
+  @media screen and (min-width: ${RESOLUTION.ULTRA}px) {
     transform: ${(props) =>
       props.isAnimated
         ? 'translateX(0%) scale(2)'

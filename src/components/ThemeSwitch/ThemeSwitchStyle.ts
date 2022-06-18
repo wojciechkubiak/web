@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
 import { Page } from '../../types/Pages';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface IThemeSwitch {
   isDarkMode?: boolean;
@@ -32,13 +33,13 @@ export const ThemeSwitchContainer = styled.div<IThemeSwitch>`
     rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     left: 8px;
     top: 8px;
     transform: scale(0.8);
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     left: 48px;
     top: 8px;
   }

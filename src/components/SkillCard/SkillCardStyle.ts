@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface ICard {
   theme?: Theme;
@@ -23,11 +24,11 @@ export const Card = styled.div<ICard>`
   background-color: ${(props) =>
     props.theme === Theme.DARK ? '#313131' : 'white'};
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(0.9);
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     width: 100%;
   }
 `;
@@ -77,7 +78,7 @@ export const CardBody = styled.div<ICard>`
       props.theme === Theme.DARK ? '#313131' : '1px solid white'};
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     & > h1 {
       font-size: 36px;
     }

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface ISkillsStyles {
   transform?: number;
@@ -32,12 +33,12 @@ export const SkillsBody = styled.div<ISkillsStyles>`
   background-color: ${(props) =>
     props.theme === Theme.DARK ? '#313131' : 'white'};
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(0.8);
     max-height: 70%;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     width: 100%;
   }
 `;
@@ -68,7 +69,7 @@ export const Header = styled.h1<ISkillsStyles>`
   border-right: 4px solid #adb757;
   padding: 0 20px;
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     position: relative;
     width: 80%;
     left: 50%;
@@ -79,7 +80,7 @@ export const Header = styled.h1<ISkillsStyles>`
 `;
 
 export const ButtonsContainer = styled.div`
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(0.8);
   }
 `;

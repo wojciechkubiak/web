@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface IContactStyles {
   transform?: number;
@@ -21,7 +22,7 @@ export const Container = styled.div<IContactStyles>`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     max-height: 100vh;
     flex-direction: column;
     justify-content: center;
@@ -46,17 +47,17 @@ export const FormContainer = styled.div<IContactStyles>`
     props.theme !== Theme.DARK &&
     'rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 20px 10px -10px, rgba(0, 0, 0, 0.3) 0px 10px 20px -10px'};
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(0.8);
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: ${RESOLUTION.MD}px) {
     transform: scale(0.7);
     width: 40%;
     margin-left: 4%;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     width: 100%;
     margin-left: 0;
   }
@@ -70,7 +71,7 @@ export const SocialContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     flex-direction: row;
     bottom: 60px;
     width: 80%;
@@ -99,12 +100,12 @@ export const Socials = styled.div<IContactStyles>`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: scale(0.6);
     right: 6px;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     position: relative;
     flex-direction: row;
     justify-content: space-between;
@@ -136,7 +137,7 @@ export const Header = styled.h1<IContactStyles>`
   border-right: 4px solid #adb757;
   padding: 0 20px;
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     font-size: 72px;
   }
 `;
@@ -197,7 +198,7 @@ export const TextArea = styled.textarea<IContactStyles>`
     outline: none;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     min-width: 80%;
   }
 `;

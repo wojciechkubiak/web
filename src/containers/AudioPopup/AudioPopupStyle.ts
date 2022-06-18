@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Theme } from '../../types/Themes';
+import { RESOLUTION } from '../../utils/resolutions';
 
 interface IAudioContainer {
   theme: Theme;
@@ -29,11 +30,11 @@ export const AudioContainer = styled.div<IAudioContainer>`
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 40px;
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: ${RESOLUTION.HD}px) {
     transform: translate(-50%, -50%) scale(0.8);
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: ${RESOLUTION.SM}px) {
     transform: translate(-50%, -50%) scale(0.5);
   }
 `;
